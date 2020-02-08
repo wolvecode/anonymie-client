@@ -18,7 +18,10 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
+    "pr": "^0.3.2",
+    "prettier": "^1.19.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2"
   }
 }
