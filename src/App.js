@@ -1,11 +1,23 @@
-import React from "react";
+import React from 'react'
+import Home from './Components/Home'
+import AdminSect from './Components/Adminsect'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-const App = () => {
-  return (
-    <div>
-      <h1>React Parcel Starter</h1>
-    </div>
-  );
-};
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Admin">
+            <AdminSect />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    )
+  }
+}
 
-export default App;
+export default App
