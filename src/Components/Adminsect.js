@@ -21,10 +21,19 @@ export default function AdminSect() {
       <div className="row justify-content-center pb-5">
         <div className="col-lg-8">
           <ul className="list-group">
-            <li className="list-group-item text-center font-weight-bolder">
+            <li className="list-group-item border-danger text-center mb-2 font-weight-bold">
               hel
             </li>
-            <li className="list-group-item text-center font-weight-bolder">
+            <li className="list-group-item border-danger text-center mb-2 font-weight-bold">
+              hel
+            </li>
+            <li className="list-group-item border-danger text-center mb-2 font-weight-bold">
+              hel
+            </li>
+            <li className="list-group-item border-danger text-center mb-2 font-weight-bold">
+              hel
+            </li>
+            <li className="list-group-item border-danger text-center mb-2 font-weight-bold">
               hel
             </li>
           </ul>
