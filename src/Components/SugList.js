@@ -10,24 +10,59 @@ export default function SugList() {
         </div>
       </div>
       <div className="row justify-content-center pt-2">
-        <div className="col-lg-8">
-          <ul className="list-group p-4">
-            <li className="list-group-item border-danger text-center mb-2">
-              Dr Babatunde activaness in class
-            </li>
-            <li className="list-group-item border-danger text-center mb-2">
-              Mrs Yusuf class approach
-            </li>
-            <li className="list-group-item border-danger text-center mb-2">
-              Dr, Mrs Ajao style of teaching
-            </li>
-            <li className="list-group-item border-danger text-center mb-2">
-              School leactures general approach
-            </li>
-            <li className="list-group-item border-danger text-center mb-2">
-              About Information Communication Technology
-            </li>
-          </ul>
+        <div className="col-lg-8 offset-1">
+          <h3 className="text-center">Mr Babatunde Class Approach</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae,
+            atque repellat consequuntur totam reiciendis possimus hic architecto
+            deserunt incidunt
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col">
+          <p className="p-2 border-muted ">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
+          <p className="p-2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
+            maxime natus dignissimos repellendus sed nemo veniam iusto itaque
+            animi. Magnam accusamus culpa vitae voluptas ratione atque totam
+            dicta harum officia!
+          </p>
         </div>
       </div>
     </Home>
