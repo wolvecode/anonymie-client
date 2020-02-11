@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Home'
-import './css/AdminSect'
+import './css/style.css'
 
 export default function AdminSect() {
   return (
@@ -17,10 +17,13 @@ export default function AdminSect() {
           />
         </div>
       </div>
-      <div className="row pl-4">
-        <div className="col-lg-10">
-          <div>
-            <h3>Mr Bababtunde Approach</h3>
+      <div className="row pl-4 pt-5">
+        <div className="">
+          <div className="row pl-3 pr-4">
+            <h3 className="">Mr Bababtunde Approach</h3>
+            <button className="ml-auto btn">
+              <i class="ml-auto fas fa-ellipsis-v"></i>
+            </button>
           </div>
           <div className="">
             <p>
@@ -31,8 +34,11 @@ export default function AdminSect() {
             </p>
           </div>
           <div>
-            <div>
-              <h3>Mr Bababtunde Approach</h3>
+            <div className="row pl-3 pr-4">
+              <h3 className="">Mr Bababtunde Approach</h3>
+              <button className="ml-auto btn">
+                <i class="ml-auto fas fa-ellipsis-v"></i>
+              </button>
             </div>
             <div className="">
               <p>
@@ -44,6 +50,12 @@ export default function AdminSect() {
             </div>
           </div>
           <div>
+            <div className="row pl-3 pr-4">
+              <h3 className="">Mr Bababtunde Approach</h3>
+              <button className="ml-auto btn">
+                <i class="ml-auto fas fa-ellipsis-v"></i>
+              </button>
+            </div>
             <div className="">
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
@@ -54,8 +66,11 @@ export default function AdminSect() {
             </div>
           </div>
           <div>
-            <div>
-              <h3>Mr Bababtunde Approach</h3>
+            <div className="row pl-3 pr-4">
+              <h3 className="">Mr Bababtunde Approach</h3>
+              <button className="ml-auto btn">
+                <i class="ml-auto fas fa-ellipsis-v"></i>
+              </button>
             </div>
             <div className="">
               <p>
@@ -67,8 +82,11 @@ export default function AdminSect() {
             </div>
           </div>
           <div className="">
-            <div className="">
-              <h3 className="inline">Mr Bababtunde Approach</h3>
+            <div className="row pl-3 pr-4">
+              <h3 className="">Mr Bababtunde Approach</h3>
+              <button className="ml-auto btn">
+                <i class="ml-auto fas fa-ellipsis-v"></i>
+              </button>
             </div>
             <div className="">
               <p>
@@ -82,16 +100,18 @@ export default function AdminSect() {
         </div>
       </div>
       <div className="row">
-        <div className="ml-auto">
+        <div>
           <button
+            className="btn fixed"
+            display="static"
             type="button"
-            className="btn"
             data-toggle="modal"
             data-target="#exampleModalCenter"
           >
-            <i className="add fab fa-medrt"></i>
+            <i className="fab fa-medrt"></i>
           </button>
-
+        </div>
+        <div className="ml-auto">
           <div
             className="modal fade"
             id="exampleModalCenter"
@@ -104,7 +124,7 @@ export default function AdminSect() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="exampleModalLongTitle">
-                    Modal title
+                    Add Suggestion
                   </h5>
                   <button
                     type="button"
@@ -115,7 +135,35 @@ export default function AdminSect() {
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <div className="modal-body">Hello world</div>
+                <div className="modal-body">
+                  <form className="col-lg-10">
+                    <div className="form-group">
+                      <label for="recipient-name" className="form-label">
+                        Title
+                      </label>
+                      <input
+                        type="text"
+                        className="border-danger form-control"
+                        id="recipient-name"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label for="message-text" className="form-label">
+                        Description
+                      </label>
+                      <textarea
+                        className="border-danger form-control"
+                        id="message-text"
+                      ></textarea>
+                    </div>
+                    <button
+                      type="button"
+                      className="btn btn-group-lg b-style btn-primary"
+                    >
+                      Add
+                    </button>
+                  </form>
+                </div>
                 <div className="modal-footer">
                   <button
                     type="button"
@@ -123,9 +171,6 @@ export default function AdminSect() {
                     data-dismiss="modal"
                   >
                     Close
-                  </button>
-                  <button type="button" className="btn btn-primary">
-                    Save changes
                   </button>
                 </div>
               </div>
