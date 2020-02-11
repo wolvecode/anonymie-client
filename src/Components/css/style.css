@@ -1,0 +1,91 @@
+/***
+Body style
+**/
+
+body {
+  background-color: #f1f2f6;
+}
+
+/***
+General Styling
+***/
+
+h1 {
+  font-family: 'Coda Caption', sans-serif;
+  color: #4e5075;
+}
+input {
+  border-color: #f79f1f;
+}
+h3 {
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  font-weight: bold;
+  color: #e4bb64;
+}
+p {
+  font-family: 'Cantarell', sans-serif;
+  color: rgb(85, 72, 95);
+}
+.b {
+  width: 100px;
+}
+.b-container {
+  height: 200px;
+}
+
+li {
+  color: #e67e22;
+}
+
+/**
+  Adminsect Style
+***/
+.border {
+  border-color: #f79f1f;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.form-label {
+  color: #f79f1f;
+}
+.fixed {
+  bottom: 0;
+  right: 220px;
+  position: fixed;
+}
+label {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.fas {
+  font-size: 15px;
+}
+
+i {
+  text-align: right;
+}
+
+i {
+  font-size: 45px;
+  color: #dd7d22;
+  font-weight: bolder;
+}
+
+/***
+  Login Style
+**/
+
+.btn-log button {
+  width: 300px;
+}
+/***
+UserComment Style
+**/
+
+.comment .btn {
+  width: 420px;
+}
