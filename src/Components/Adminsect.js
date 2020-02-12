@@ -20,10 +20,23 @@ export default function AdminSect() {
       <div className="row pl-4 pt-5">
         <div className="">
           <div className="row pl-3 pr-4">
-            <h3 className="">Mr Bababtunde Approach</h3>
-            <button className="ml-auto btn">
-              <i class="ml-auto fas fa-ellipsis-v"></i>
-            </button>
+            <h5 className="">Mr Bababtunde Approach</h5>
+            <div className="btn-group dropup ml-auto">
+              <button
+                className=" btn"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                type="button"
+              >
+                <i class="ml-auto fas fa-ellipsis-v"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">
+                  Delete
+                </a>
+              </div>
+            </div>
           </div>
           <div className="">
             <p>
@@ -35,7 +48,7 @@ export default function AdminSect() {
           </div>
           <div>
             <div className="row pl-3 pr-4">
-              <h3 className="">Mr Bababtunde Approach</h3>
+              <h5 className="">Mr Bababtunde Approach</h5>
               <button className="ml-auto btn">
                 <i class="ml-auto fas fa-ellipsis-v"></i>
               </button>
@@ -51,7 +64,7 @@ export default function AdminSect() {
           </div>
           <div>
             <div className="row pl-3 pr-4">
-              <h3 className="">Mr Bababtunde Approach</h3>
+              <h5 className="">Mr Bababtunde Approach</h5>
               <button className="ml-auto btn">
                 <i class="ml-auto fas fa-ellipsis-v"></i>
               </button>
@@ -67,7 +80,7 @@ export default function AdminSect() {
           </div>
           <div>
             <div className="row pl-3 pr-4">
-              <h3 className="">Mr Bababtunde Approach</h3>
+              <h5 className="">Mr Bababtunde Approach</h5>
               <button className="ml-auto btn">
                 <i class="ml-auto fas fa-ellipsis-v"></i>
               </button>
@@ -83,7 +96,7 @@ export default function AdminSect() {
           </div>
           <div className="">
             <div className="row pl-3 pr-4">
-              <h3 className="">Mr Bababtunde Approach</h3>
+              <h5 className="">Mr Bababtunde Approach</h5>
               <button className="ml-auto btn">
                 <i class="ml-auto fas fa-ellipsis-v"></i>
               </button>
@@ -100,7 +113,7 @@ export default function AdminSect() {
         </div>
       </div>
       <div className="row">
-        <div>
+        <div className="">
           <button
             className="btn fixed"
             display="static"
