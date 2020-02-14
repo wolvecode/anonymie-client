@@ -11,20 +11,20 @@ General Styling
 ***/
 
 h1 {
-  font-family: 'Amaranth', sans-serif;
-  color: #4bcffa;
+  font-family: 'Open Sans', sans-serif;
+  color: #393c79;
 }
 input {
-  border-color: #f79f1f;
+  border-color: ;
 }
 h5 {
-  font-family: 'Jaldi', sans-serif;
+  font-family:  'Quicksand', sans-serif;
   font-weight: bold;
-  color: #4e5075;
+  color: #e11c1c;
 }
 p {
-  font-family: 'Cantarell', sans-serif;
-  color: ;
+  font-family: Quicksand', sans-serif;
+  font-family: 'Abel', sans-serif;
 }
 .b {
   width: 100px;
@@ -44,18 +44,6 @@ li {
   border-color: #f79f1f;
 }
 
-.modal-title {
-  text-align: center;
-}
-
-.form-label {
-  color: #f79f1f;
-}
-.fixed {
-  bottom: 0;
-  right: 220px;
-  position: fixed;
-}
 label {
   font-weight: bold;
   font-size: 18px;
@@ -74,6 +62,26 @@ i {
   color: #dd7d22;
   font-weight: bolder;
 }
+.form-label {
+  color: #f79f1f;
+}
+
+/**
+MODAL
+**/
+.fixed {
+  bottom: 0;
+  right: 220px;
+  position: fixed;
+}
+
+.modal-title {
+  color: red;
+  margin-left: auto;
+}
+.b-style {
+  width: 100%;
+}
 
 /***
   Login Style
@@ -82,6 +90,7 @@ i {
 .btn-log button {
   width: 300px;
 }
+
 /***
 UserComment Style
 **/
