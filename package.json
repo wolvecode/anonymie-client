@@ -18,6 +18,11 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "joi": "^14.3.1",
+    "mongoose": "^5.8.11",
     "pr": "^0.3.2",
     "prettier": "^1.19.1",
     "react": "^16.12.0",

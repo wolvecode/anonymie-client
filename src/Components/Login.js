@@ -1,5 +1,4 @@
 import React from 'react'
-import './css/Login'
 import Home from './Home'
 
 export default function Login() {
@@ -9,7 +8,7 @@ export default function Login() {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <div className="form-style pb-5">
-            <h1 className="display-4 font-weight-bolder text-center">Login</h1>
+            <h3 className="display-4 font-weight-bolder text-center">Login</h3>
             <form action="#" className="form-label">
               <div className="form pt-4">
                 <input
@@ -17,7 +16,7 @@ export default function Login() {
                   name="Email"
                   id=""
                   placeholder="Enter Email"
-                  className="form-control form-control-lg"
+                  className="form-control border-danger form-control-lg"
                   required
                 />
               </div>
@@ -31,8 +30,8 @@ export default function Login() {
                   required
                 />
               </div>
-              <div className="form pt-4">
-                <button className="form-control bg-info btn btn-lg form-control-lg">
+              <div className=" btn-log text-center pt-4">
+                <button className=" bg-info btn btn-lg form-control-lg">
                   Login
                 </button>
               </div>

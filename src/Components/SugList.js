@@ -10,13 +10,14 @@ export default function SugList() {
         </div>
       </div>
       <div className="row justify-content-center pt-2">
-        <div className="col-lg-8 offset-1">
-          <h3 className="text-center">Mr Babatunde Class Approach</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae,
-            atque repellat consequuntur totam reiciendis possimus hic architecto
-            deserunt incidunt
-          </p>
+        <div className="pl-4">
+          <h3 className="">Mr Babatunde Class Approach</h3>
+          <h5 className="">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe,
+            quia obcaecati accusantium animi deleniti in minima consequatur
+            necessitatibus labore libero itaque quod repudiandae quasi earum?
+            Sint similique eius animi minus.
+          </h5>
         </div>
       </div>
       <div className="row">
