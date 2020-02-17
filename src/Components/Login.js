@@ -9,7 +9,7 @@ export default function Login() {
         <div className="col-lg-6">
           <div className="form-style pb-5">
             <h3 className="display-4 font-weight-bolder text-center">Login</h3>
-            <form action="#" className="form-label">
+            <form action="/" method="post" className="form-label">
               <div className="form pt-4">
                 <input
                   type="text"
