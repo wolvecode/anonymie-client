@@ -14,7 +14,6 @@ export default function Login() {
                 <input
                   type="text"
                   name="Email"
-                  id=""
                   placeholder="Enter Email"
                   className="form-control border-danger form-control-lg"
                   required
@@ -24,7 +23,6 @@ export default function Login() {
                 <input
                   type="password"
                   name="Password"
-                  id=""
                   placeholder="Enter Password"
                   className="form-control form-control-lg"
                   required
