@@ -81,6 +81,8 @@ MODAL
 }
 .b-style {
   width: 100%;
+  color: red;
+  background-color: #27ae60;
 }
 
 /***
@@ -97,4 +99,15 @@ UserComment Style
 
 .comment .btn {
   width: 420px;
+}
+
+
+/***
+Suggestion list Styles
+***/
+
+.p-comment{
+  font-size: 18px;
+  font-weight: normal;
+  color: blueviolet;
 }

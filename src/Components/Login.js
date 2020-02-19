@@ -15,7 +15,7 @@ export default function Login() {
                   type="text"
                   name="Email"
                   placeholder="Enter Email"
-                  className="form-control border-danger form-control-lg"
+                  className="form-control form-control-lg"
                   required
                 />
               </div>

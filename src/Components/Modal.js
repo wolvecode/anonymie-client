@@ -50,7 +50,7 @@ export default function Modal() {
                   </div>
                   <button
                     type="button"
-                    className="btn btn-group-lg b-style btn-primary"
+                    className="btn btn-group-lg b-style"
                   >
                     Add
                   </button>
