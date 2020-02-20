@@ -11,20 +11,19 @@ General Styling
 ***/
 
 h1 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tomorrow', sans-serif;
   color: #393c79;
 }
 input {
   border-color: ;
 }
 h5 {
-  font-family:  'Quicksand', sans-serif;
-  font-weight: bold;
+  font-family: 'Slabo 27px', serif;
   color: #e11c1c;
 }
 p {
-  font-family: Quicksand', sans-serif;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #8395a7;
 }
 .b {
   width: 100px;
@@ -101,12 +100,11 @@ UserComment Style
   width: 420px;
 }
 
-
 /***
 Suggestion list Styles
 ***/
 
-.p-comment{
+.p-comment {
   font-size: 18px;
   font-weight: normal;
   color: blueviolet;
