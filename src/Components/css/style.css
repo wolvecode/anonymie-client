@@ -74,8 +74,13 @@ MODAL
   position: fixed;
 }
 
-.modal-title {
+.l-modal {
   color: #393c79;
+}
+
+.modal-title {
+  font-weight: bolder;
+  color: #2f3640;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .b-style {
