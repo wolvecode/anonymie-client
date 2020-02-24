@@ -19,7 +19,7 @@ input {
 }
 h5 {
   font-family: 'Slabo 27px', serif;
-  color: #e11c1c;
+  color: #2f3640;
 }
 p {
   font-family: 'Open Sans Condensed', sans-serif;
@@ -75,8 +75,8 @@ MODAL
 }
 
 .modal-title {
-  color: red;
-  margin-left: auto;
+  color: #393c79;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .b-style {
   width: 100%;

@@ -15,7 +15,7 @@ export default function Modal() {
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLongTitle">
+                <h5 className="modal-title pl-3" id="exampleModalLongTitle">
                   Add Suggestion
                 </h5>
                 <button
@@ -30,7 +30,7 @@ export default function Modal() {
               <div className="modal-body">
                 <form className="col-lg-10">
                   <div className="form-group">
-                    <label for="recipient-name" className="form-label">
+                    <label for="recipient-name" className="form-label l-modal">
                       Title
                     </label>
                     <input
@@ -40,7 +40,7 @@ export default function Modal() {
                     />
                   </div>
                   <div className="form-group">
-                    <label for="message-text" className="form-label">
+                    <label for="message-text" className="form-label l-modal">
                       Description
                     </label>
                     <textarea
@@ -48,10 +48,7 @@ export default function Modal() {
                       id="message-text"
                     ></textarea>
                   </div>
-                  <button
-                    type="button"
-                    className="btn btn-group-lg b-style"
-                  >
+                  <button type="button" className="btn btn-group-lg b-style">
                     Add
                   </button>
                 </form>
