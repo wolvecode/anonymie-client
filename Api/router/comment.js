@@ -1,57 +1,74 @@
 const express = require('express')
 const router = express.Router()
+const mongoose = require('mongoose')
 const Joi = require('joi')
 
-const comments = [
-  {
-    id: 1,
-    title: 'mr bababtunde',
-    description: 'you are open to talk about mr babatunde last class'
-  },
-  {
-    id: 2,
-    title: 'mr bababtunde',
-    description: 'you are open to talk about mr babatunde last class'
-  },
-  {
-    id: 3,
-    title: 'mr bababtunde',
-    description: 'you are open to talk about mr babatunde last class'
-  }
-]
+// const comments = [
+//   {
+//     id: 1,
+//     title: 'mr bababtunde',
+//     description: 'you are open to talk about mr babatunde last class'
+//   },
+//   {
+//     id: 2,
+//     title: 'mr bababtunde',
+//     description: 'you are open to talk about mr babatunde last class'
+//   },
+//   {
+//     id: 3,
+//     title: 'mr bababtunde',
+//     description: 'you are open to talk about mr babatunde last class'
+//   }
+// ]
 
-router.get('/comment', (req, res, next) => {
-  res.send(comments)
+const commentSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 50
+  },
+  description: {
+    type: String,
+    required: true,
+    minlength: 5,
+    maxlength: 255
+  }
+})
+
+const Comment = mongoose.model('Comment', commentSchema)
+
+router.get('/comment', async (req, res, next) => {
+  const comment = await Comment.find()
+  res.send(comment)
   next()
 })
 
-router.post('/comment', (req, res) => {
+router.post('/comment', async (req, res) => {
   const { error } = val(req.body)
   if (error) return res.status(400).send(error.details[0].message)
 
-  const comment = {
-    id: comments.length + 1,
+  let comment = new Comment({
     title: req.body.title,
     description: req.body.description
-  }
+  })
 
-  comments.push(comment)
+  comment = await comment.save()
   res.send(comment)
 })
 
-router.put('/comment/:id', (req, res) => {
-  const comment = comments.find(c => c.id === parseInt(req.params.id))
+router.put('/comment/:id', async (req, res) => {
+  let comment = await Comment.findByIdAndUpdate(req.params.id,)
   if (!comment) return res.status(404).send('No comment with the particular id')
 
   const { error } = val(req.body)
   if (error) return res.status(400).send(error.details[0].message)
 
-  comt = {
+  comment = new Comment ({
     title: req.body.title,
     description: req.body.description
-  }
-
-  res.send(comt)
+  })
+  res.send(comment)
 })
 
 function val(suggestion) {
