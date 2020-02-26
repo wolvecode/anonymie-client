@@ -38,13 +38,13 @@ const commentSchema = new mongoose.Schema({
 
 const Comment = mongoose.model('Comment', commentSchema)
 
-router.get('/comment', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   const comment = await Comment.find()
   res.send(comment)
   next()
 })
 
-router.post('/comment', async (req, res) => {
+router.post('/', async (req, res) => {
   const { error } = val(req.body)
   if (error) return res.status(400).send(error.details[0].message)
 
@@ -57,14 +57,14 @@ router.post('/comment', async (req, res) => {
   res.send(comment)
 })
 
-router.put('/comment/:id', async (req, res) => {
-  let comment = await Comment.findByIdAndUpdate(req.params.id,)
+router.put('/:id', async (req, res) => {
+  let comment = await Comment.findByIdAndUpdate(req.params.id)
   if (!comment) return res.status(404).send('No comment with the particular id')
 
   const { error } = val(req.body)
   if (error) return res.status(400).send(error.details[0].message)
 
-  comment = new Comment ({
+  comment = new Comment({
     title: req.body.title,
     description: req.body.description
   })
