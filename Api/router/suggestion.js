@@ -38,13 +38,13 @@ const suggestionSchema = new mongoose.Schema({
 
 const Suggestion = mongoose.model('Suggestion', suggestionSchema)
 
-router.get('/suggestion', async (req, res, next) => {
+router.get('/', async (req, res, next) => {
   const suggestion = await Suggestion.find()
   res.send(suggestion)
   next()
 })
 
-router.get('/suggestion/:id', async (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   try {
     const suggestion = await Suggestion.findById(req.params.id)
     if (!suggestion)
@@ -58,7 +58,7 @@ router.get('/suggestion/:id', async (req, res, next) => {
   }
 })
 
-router.post('/suggestion', async (req, res) => {
+router.post('/', async (req, res) => {
   const { error } = val(req.body)
   if (error) return res.status(400).send(error.details[0].message)
 
@@ -70,7 +70,7 @@ router.post('/suggestion', async (req, res) => {
   res.send(suggestion)
 })
 
-router.put('/suggestion/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
   const suggestion = await Suggestion.findOneAndUpdate(
     req.params.id,
     { title: req.body.title, description: req.body.description },
@@ -88,7 +88,7 @@ router.put('/suggestion/:id', async (req, res) => {
   res.send(suggestion)
 })
 
-router.delete('/suggestion/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const suggestion = await Suggestion.findByIdAndRemove(req.params.id)
 
   if (!suggestion)
