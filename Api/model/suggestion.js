@@ -32,4 +32,4 @@ function val(suggestion) {
 }
 
 exports.Suggestion = Suggestion
-exports.val = validate
+exports.validate = val
