@@ -2,6 +2,9 @@ const express = require('express')
 const Joi = require('joi')
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
+const config = require('config')
+
 const _ = require('lodash')
 const router = express.Router()
 const { Admin } = require('../model/admin')
@@ -21,7 +24,8 @@ router.post('/', async (req, res) => {
   const validPassword = await bcrypt.compare(req.body.password, admin.password)
   if (!validPassword) return res.status(400).send('Invalid email or password')
 
-  res.send(true)
+  const token = admin.generateAuthToken()
+  res.send(token)
 })
 
 function validate(req) {
