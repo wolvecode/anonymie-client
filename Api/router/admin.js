@@ -2,6 +2,8 @@ const express = require('express')
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 const _ = require('lodash')
+const jwt = require('jsonwebtoken')
+const config = require('config')
 const router = express.Router()
 const { Admin, validate } = require('../model/admin')
 
@@ -23,7 +25,11 @@ router.post('/', async (req, res) => {
   admin.password = await bcrypt.hash(admin.password, salt)
 
   admin = await admin.save()
-  res.send(_.pick(admin, ['_id', 'name', 'email']))
+
+  const token = admin.generateAuthToken()
+  res
+    .header('x-auth-token', token)
+    .send(_.pick(admin, ['_id', 'name', 'email']))
 })
 
 module.exports = router
