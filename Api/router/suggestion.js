@@ -1,67 +1,23 @@
 const express = require('express')
 const router = express.Router()
-const { Suggestion, validate} = require('../model/suggestion')
-const mongoose = require('mongoose')
+const { Suggestion, validate } = require('../model/suggestion')
 
-router.get('/', async (req, res, next) => {
-  const suggestion = await Suggestion.find()
-  res.send(suggestion)
-  next()
-})
+const {
+  getAllSuggestion,
+  getSuggestionById,
+  createSuggestion,
+  updateSuggestionById,
+  deleteSuggestion
+} = require('../controllers/suggesionController')
 
-router.get('/:id', async (req, res, next) => {
-  try {
-    const suggestion = await Suggestion.findById(req.params.id)
-    if (!suggestion)
-      return res
-        .status(404)
-        .send('The suggestion with the given ID was not found.')
-    res.send(suggestion)
-    next()
-  } catch (err) {
-    console.log(err.message)
-  }
-})
+router.get('/', getAllSuggestion)
 
-router.post('/', async (req, res) => {
-  const { error } = validate(req.body)
-  if (error) return res.status(400).send(error.details[0].message)
+router.get('/:id', getSuggestionById)
 
-  let suggestion = new Suggestion({
-    title: req.body.title,
-    description: req.body.description
-  })
-  suggestion = await suggestion.save()
-  res.send(suggestion)
-})
+router.post('/', createSuggestion)
 
-router.put('/:id', async (req, res) => {
-  const suggestion = await Suggestion.findOneAndUpdate(
-    req.params.id,
-    { title: req.body.title, description: req.body.description },
-    { new: true }
-  )
+router.put('/:id', updateSuggestionById)
 
-  const { error } = validate(req.body)
-  if (error) return res.status(400).send(error.details[0].message)
-
-  if (!suggestion)
-    return res
-      .status(404)
-      .send('The suggestion with the given ID was not found.')
-
-  res.send(suggestion)
-})
-
-router.delete('/:id', async (req, res) => {
-  const suggestion = await Suggestion.findByIdAndRemove(req.params.id)
-
-  if (!suggestion)
-    return res
-      .status(404)
-      .send('The suggestion with the given ID was not found.')
-
-  res.send(suggestion)
-})
+router.delete('/:id', deleteSuggestion)
 
 module.exports = router
