@@ -1,5 +1,4 @@
 const { Suggestion, validate } = require('../model/suggestion')
-const { Suggestion, validate } = require('../model/suggestion')
 
 exports.getAllSuggestion = async (req, res, next) => {
   const suggestion = await Suggestion.find()
@@ -51,14 +50,13 @@ exports.updateSuggestionById = async (req, res) => {
   res.send(suggestion)
 }
 
-
 exports.deleteSuggestion = async (req, res) => {
-    const suggestion = await Suggestion.findByIdAndRemove(req.params.id)
-  
-    if (!suggestion)
-      return res
-        .status(404)
-        .send('The suggestion with the given ID was not found.')
-  
-    res.send(suggestion)
-  }
+  const suggestion = await Suggestion.findByIdAndRemove(req.params.id)
+
+  if (!suggestion)
+    return res
+      .status(404)
+      .send('The suggestion with the given ID was not found.')
+
+  res.send(suggestion)
+}
