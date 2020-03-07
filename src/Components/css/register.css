@@ -1,0 +1,101 @@
+.row {
+  height: 100%;
+  background: #ffffff;
+}
+
+.side3 {
+  height: 100%;
+  background: linear-gradient(
+    313.99deg,
+    rgba(221, 122, 120, 0.8) 0%,
+    #d36462 71.12%
+  );
+}
+
+.side4 {
+  background: #ffffff;
+}
+
+.icon {
+  display: flex;
+}
+.icon i {
+  margin-left: 15px;
+  margin-top: 10px;
+  font-size: 30px;
+  color: #ffffff;
+}
+.icon p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 10px;
+  font-size: 20px;
+  color: #312d2f;
+}
+
+.icn {
+  margin-top: 50px;
+}
+
+.move {
+  color: #ffffff;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.move button:hover {
+  background-color: #fff;
+  transition: 2s;
+}
+
+.move h3 {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.move p {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.grad5 {
+  height: 60px;
+  width: 60px;
+  margin-top: 50px;
+  margin-left: 80%;
+  transform: rotate(-45deg);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+.grad6 {
+  margin-top: 70px;
+  display: flex;
+  margin-left: -15px;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  clip-path: polygon(0 0, 0 51%, 45% 84%);
+  background: rgba(246, 241, 232, 0.1);
+}
+.grad7 {
+
+  position: absolute;
+  height: 60px;
+  width: 50px;
+  clip-path: polygon(0 25%, 38% 0, 69% 75%, 31% 100%);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+.grad8 {
+  
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  clip-path: circle(50% at 91% 100%);
+  background: rgba(246, 241, 232, 0.1);
+}
