@@ -28,7 +28,7 @@ export default function Login() {
             <form action="">
               <div className="align">
                 <i class="fas fa-envelope-square"></i>
-                <input type="text" className="form" placeholder="Last name" />
+                <input type="text" className="form" placeholder="Name" />
               </div>
               <div className="align">
                 <i class="fas fa-lock"></i>
@@ -51,6 +51,7 @@ export default function Login() {
         <div className="col-5 side2">
           <div className="grad1"></div>
           <div className="justify">
+            <div className="grad2"></div>
             <h3>Hello!</h3>
             <p>
               Enter your details to create <br /> an account
@@ -58,8 +59,9 @@ export default function Login() {
             <form action="">
               <button>SIGN UP</button>
             </form>
-            <div className="grad2"></div>
           </div>
+          <div className="grad3"></div>
+          <div className="grad4"></div>
         </div>
       </div>
     </div>
