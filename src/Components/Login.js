@@ -1,42 +1,67 @@
 import React from 'react'
-import Home from './Home'
 
 export default function Login() {
   return (
-    <Home>
-      <h1 className="display-4 font-weight-bolder m-4"> Anoymie</h1>
-      <div className="row justify-content-center">
-        <div className="col-lg-6">
-          <div className="form-style pb-5">
-            <h3 className="display-4 font-weight-bolder text-center">Login</h3>
-            <form action="/" method="post" className="form-label">
-              <div className="form pt-4">
-                <input
-                  type="text"
-                  name="Email"
-                  placeholder="Enter Email"
-                  className="form-control form-control-lg"
-                  required
-                />
+    <div className="container-fluid">
+      <div className="row side">
+        <div className="col-7 side1 ">
+          <div className="logo">
+            <i className="far fa-user"></i>
+            <p>nonymi</p>
+          </div>
+          <p className="sign-text">Sign in to Dashboard</p>
+          <div className="b">
+            <a href="" className=" brand">
+              <i className="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="" className=" brand">
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="" className=" brand">
+              <i className="fab fa-google"></i>
+            </a>
+          </div>
+          <div className="form-group my-form">
+            <p>or use your email account</p>
+            <form action="">
+              <div className="align">
+                <i class="fas fa-envelope-square"></i>
+                <input type="text" className="form" placeholder="Last name" />
               </div>
-              <div className="form pt-4">
+              <div className="align">
+                <i class="fas fa-lock"></i>
                 <input
                   type="password"
-                  name="Password"
-                  placeholder="Enter Password"
-                  className="form-control form-control-lg"
-                  required
+                  className="form"
+                  placeholder="Password"
                 />
               </div>
-              <div className=" btn-log text-center pt-4">
-                <button className=" bg-info btn btn-lg form-control-lg">
-                  Login
-                </button>
+              <div className="align a">
+                <div>
+                  <a href="">Forget your password?</a>
+                  <div className="underline justify-content-center"></div>
+                </div>
+                <button>SIGN IN</button>
               </div>
             </form>
           </div>
         </div>
+        <div className="col-5 side2">
+          <div className="grad1"></div>
+          <div className="justify">
+            <h3>Hello!</h3>
+            <p>
+              Enter your details to create <br /> an account
+            </p>
+            <form action="">
+              <button>SIGN UP</button>
+            </form>
+            <div className="grad2"></div>
+          </div>
+        </div>
       </div>
-    </Home>
+    </div>
   )
 }
