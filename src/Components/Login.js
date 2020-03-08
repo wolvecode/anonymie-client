@@ -4,7 +4,7 @@ export default function Login() {
   return (
     <div className="container-fluid">
       <div className="row side">
-        <div className="col-7 side1 ">
+        <div className="col-lg-7 col-md-7  side1 p-0">
           <div className="logo">
             <i className="far fa-user"></i>
             <p>nonymi</p>
@@ -28,12 +28,13 @@ export default function Login() {
             <form action="">
               <div className="align">
                 <i class="fas fa-envelope-square"></i>
-                <input type="text" className="form" placeholder="Name" />
+                <input type="text" className="input-field" placeholder="Name" />
               </div>
               <div className="align">
                 <i class="fas fa-lock"></i>
                 <input
                   type="password"
+                  className="input-field"
                   className="form"
                   placeholder="Password"
                 />
@@ -43,12 +44,21 @@ export default function Login() {
                   <a href="">Forget your password?</a>
                   <div className="underline justify-content-center"></div>
                 </div>
-                <button>SIGN IN</button>
+                <div>
+                  <button>SIGN IN</button>
+                </div>
+                <div className="button2">
+                  <div>
+                    <a href="">You don't have an account, Register</a>
+                    <div className="underline justify-content-center"></div>
+                  </div>
+                  <button className="">SIGN UP</button>
+                </div>
               </div>
             </form>
           </div>
         </div>
-        <div className="col-5 side2">
+        <div className="col-lg-5 col-md-5 hidden-sm-down side2 p-0">
           <div className="grad1"></div>
           <div className="justify">
             <div className="grad2"></div>
