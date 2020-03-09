@@ -12,6 +12,7 @@ export default function Register() {
           </div>
           <div className="grad5"></div>
           <div className="move">
+            <div className="grad6"></div>
             <h3>Welcome Back!</h3>
             <p>
               Sign in into dashboard with <br /> your personal details
@@ -19,7 +20,9 @@ export default function Register() {
             <form action="">
               <button>SIGN UP</button>
             </form>
+            <div className="grad7"></div>
           </div>
+          <div className="grad8"></div>
         </div>
         <div className="col-7  side4">
           <div className="icn">
