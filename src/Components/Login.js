@@ -47,13 +47,7 @@ export default function Login() {
                 <div>
                   <button>SIGN IN</button>
                 </div>
-                <div className="button2">
-                  <div>
-                    <a href="">You don't have an account, Register</a>
-                    <div className="underline justify-content-center"></div>
-                  </div>
-                  <button className="">SIGN UP</button>
-                </div>
+              
               </div>
             </form>
           </div>
