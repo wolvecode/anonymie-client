@@ -2,6 +2,14 @@ import React from 'react'
 import './css/register.css'
 
 export default function Register() {
+  const [state, setState] = useState('')
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    onSubmit(state)
+    setState('')
+  }
+
   return (
     <div className="container-fluid">
       <div className="row">
@@ -18,7 +26,7 @@ export default function Register() {
               Sign in into dashboard with <br /> your personal details
             </p>
             <form action="">
-              <button>SIGN UP</button>
+              <button>SIGN IN</button>
             </form>
             <div className="grad7"></div>
           </div>
@@ -43,14 +51,19 @@ export default function Register() {
           </div>
           <div className="form-group my-form">
             <p>or use your email for registration</p>
-            <form action="">
+            <form action="" method="post" onSubmit={handleSubmit}>
               <div className="align">
                 <i class="fas fa-envelope-square"></i>
-                <input type="text" className="form" placeholder="Name" />
+                <input
+                  type="text"
+                  className="form"
+                  placeholder="Email"
+                  name="email"
+                />
               </div>
               <div className="align">
                 <i class="fas fa-envelope-square"></i>
-                <input type="text" className="form" placeholder="Last name" />
+                <input type="text" className="form" placeholder="Name" />
               </div>
               <div className="align">
                 <i class="fas fa-lock"></i>
@@ -58,10 +71,11 @@ export default function Register() {
                   type="password"
                   className="form"
                   placeholder="Password"
+                  name="password"
                 />
               </div>
               <div className="align a">
-                <button>SIGN IN</button>
+                <button>SIGN UP</button>
               </div>
             </form>
           </div>

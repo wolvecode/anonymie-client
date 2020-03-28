@@ -5,8 +5,12 @@ import SugList from './Components/SugList'
 import UserComment from './Components/UserComment'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Register from './Components/Register'
+import { signup } from './utils/request'
 
 class App extends React.Component {
+  constructor() {
+    super()
+  }
   render() {
     return (
       <BrowserRouter>
