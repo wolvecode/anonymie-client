@@ -12,13 +12,13 @@ exports.signUp = (email, password) => {
   }).then(res => res.json())
 }
 
-// exports.login = (email, password) => {
-//   const data = { email, password }
-//   return fetch(baseUrl + 'login', {
-//     method: 'post',
-//     mode: 'cors',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   }).then(res => res.json())
-// }
+exports.login = (email, password) => {
+  const data = { email, password }
+  return fetch(baseUrl + 'login', {
+    method: 'post',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => res.json())
+}
