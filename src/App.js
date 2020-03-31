@@ -9,7 +9,7 @@ import { signup } from './utils/request'
 
 class App extends React.Component {
   constructor() {
-    super()
+    super(x)
   }
   render() {
     return (
