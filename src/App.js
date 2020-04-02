@@ -8,8 +8,8 @@ import Register from './Components/Register'
 import { signup } from './utils/request'
 
 class App extends React.Component {
-  constructor() {
-    super(x)
+  constructor(props) {
+    super(props)
   }
   render() {
     return (
