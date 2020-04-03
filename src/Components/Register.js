@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/register.css'
+import { signup } from '../utils/request'
 
 export default function Register() {
   const [state, setState] = useState('')
