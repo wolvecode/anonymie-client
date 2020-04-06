@@ -1,16 +1,7 @@
 import React from 'react'
 import './css/register.css'
-import { signup } from '../utils/request'
 
 export default function Register() {
-  const [state, setState] = useState('')
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    onSubmit(state)
-    setState('')
-  }
-
   return (
     <div className="container-fluid">
       <div className="row">
@@ -52,7 +43,7 @@ export default function Register() {
           </div>
           <div className="form-group my-form">
             <p>or use your email for registration</p>
-            <form action="" method="post" onSubmit={handleSubmit}>
+            <form action="" method="post">
               <div className="align">
                 <i class="fas fa-envelope-square"></i>
                 <input
