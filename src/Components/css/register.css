@@ -1,7 +1,14 @@
+body {
+  font-family: Product Sans;
+}
+
 @media screen and (max-width: 768px) {
   body,
   html {
     font-size: 12px;
+  }
+  .side3 {
+    display: none;
   }
 }
 
@@ -112,11 +119,13 @@
   background: rgba(246, 241, 232, 0.1);
 }
 
-.grad8 {
-  margin-left: 0rem;
-  position: absolute;
-  height: 8.75rem;
-  width: 8.75rem;
-  clip-path: circle(100% at 0 100%);
-  background: rgba(246, 241, 232, 0.1);
+@media (min-width: 1200px) {
+  .grad8 {
+    margin-left: 0rem;
+    position: absolute;
+    height: 9rem;
+    width: 8.75rem;
+    clip-path: circle(100% at 0 100%);
+    background: rgba(246, 241, 232, 0.1);
+  }
 }

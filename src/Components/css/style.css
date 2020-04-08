@@ -1,3 +1,7 @@
+body {
+  font-family: Product Sans;
+}
+
 @media (max-width: 575.98px) {
   body,
   html {
@@ -13,7 +17,6 @@
   html {
     font-size: 12px;
   }
-  margin: auto;
   .side2 {
     display: none;
   }
@@ -238,12 +241,14 @@ button:hover {
   background: rgba(246, 241, 232, 0.1);
 }
 
-/* .grad4 {
-  margin-top: 1.5%;
-  margin-left: 62%;
-  position: absolute;
-  height: 12.5rem;
-  width: 12.5rem;
-  clip-path: circle(50% at 91% 100%);
-  background: rgba(246, 241, 232, 0.1);
-} */
+@media (min-width: 1200px) {
+  .grad4 {
+    margin-top: 0rem;
+    margin-left: 62%;
+    position: absolute;
+    height: 13rem;
+    width: 13.3rem;
+    clip-path: circle(90% at 90% 100%);
+    background: rgba(246, 241, 232, 0.1);
+  }
+}

@@ -5,19 +5,7 @@
       name="viewport"
       content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:600|Quicksand:500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Simonetta|Tomorrow&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./Components/css/sidebar.css" />
     <link
       rel="stylesheet"
       href="https://fonts.gstatic.com/s/productsans/v9/pxicypQkot1TnFhsFMOfGShdrPKbS2lBkm8.woff2 format('woff2');
@@ -25,13 +13,24 @@
     />
     <link
       rel="stylesheet"
-      href="https://fonts.gstatic.com/s/productsans/v9/pxicypQkot1TnFhsFMOfGShdrPKbT2lB.woff2) format('woff2"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
     />
 
+    <!-- Font Awesome JS -->
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+      integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+      integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
@@ -42,19 +41,49 @@
     <div id="root"></div>
     <script src="index.js"></script>
     <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <!-- Bootstrap JS -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      // Hide submenus
+      $('#body-row .collapse').collapse('hide')
+
+      // Collapse/Expand icon
+      $('#collapse-icon').addClass('fa-angle-double-left')
+
+      // Collapse click
+      $('[data-toggle=sidebar-colapse]').click(function() {
+        SidebarCollapse()
+      })
+
+      function SidebarCollapse() {
+        $('.menu-collapsed').toggleClass('d-none')
+        $('.sidebar-submenu').toggleClass('d-none')
+        $('.submenu-icon').toggleClass('d-none')
+        $('#sidebar-container').toggleClass(
+          'sidebar-expanded sidebar-collapsed'
+        )
+
+        // Treating d-flex/d-none on separators with title
+        var SeparatorTitle = $('.sidebar-separator-title')
+        if (SeparatorTitle.hasClass('d-flex')) {
+          SeparatorTitle.removeClass('d-flex')
+        } else {
+          SeparatorTitle.addClass('d-flex')
+        }
+
+        // Collapse/Expand icon
+        $('#collapse-icon').toggleClass(
+          'fa-angle-double-left fa-angle-double-right'
+        )
+      }
+    </script>
   </body>
 </html>
