@@ -65,7 +65,7 @@ class Register extends React.Component {
                   <i class="fas fa-envelope-square"></i>
                   <input
                     type="text"
-                    className="form"
+                    className="form input-field"
                     placeholder="Email"
                     name="email"
                     required

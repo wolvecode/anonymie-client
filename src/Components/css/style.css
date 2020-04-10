@@ -209,6 +209,7 @@ button {
 
 button:hover {
   color: #312d2f;
+  cursor: pointer;
 }
 
 /* shapes */
