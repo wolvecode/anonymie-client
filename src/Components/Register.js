@@ -1,24 +1,26 @@
 import React from 'react'
 import './css/register.css'
-import { signup } from '../utils/request'
 
 class Register extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      signup: ''
-    }
-    this.handleSubmit = this.handleSubmit.bind(this)
+  state = {
+    email: '',
+    password: '',
+    fullName: ''
   }
 
-  handleSubmit(fullName, email, password) {
-    signup(fullName, email, password).then(sign =>
-      this.setState({
-        signup: sign
-      })
-    )
+  handleSubmit = event => {
+    event.preventDefault()
+    console.log(this.state)
+  }
+
+  onChange = (key, element) => {
+    this.setState({
+      [key]: element.target.value
+    })
   }
   render() {
+    const { email, password, fullName } = this.state
+
     return (
       <div className="container-fluid">
         <div className="row">
@@ -62,31 +64,37 @@ class Register extends React.Component {
               <p>or use your email for registration</p>
               <form method="post" onSubmit={this.handleSubmit}>
                 <div className="align">
-                  <i class="fas fa-envelope-square"></i>
+                  <i className="fas fa-envelope-square"></i>
                   <input
                     type="text"
-                    className="form input-field"
+                    className="form"
                     placeholder="Email"
                     name="email"
+                    value={email}
+                    onChange={elm => this.onChange('email', elm)}
                     required
                   />
                 </div>
                 <div className="align">
-                  <i class="fas fa-envelope-square"></i>
+                  <i className="fas fa-envelope-square"></i>
                   <input
                     type="text"
                     className="form"
                     placeholder="Name"
+                    value={fullName}
+                    onChange={elm => this.onChange('fullName', elm)}
                     name="fullName"
                     required
                   />
                 </div>
                 <div className="align">
-                  <i class="fas fa-lock"></i>
+                  <i className="fas fa-lock"></i>
                   <input
                     type="password"
                     className="form"
                     placeholder="Password"
+                    value={password}
+                    onChange={elm => this.onChange('password', elm)}
                     name="password"
                     required
                   />
