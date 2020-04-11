@@ -27,11 +27,11 @@ export default function Login() {
             <p>or use your email account</p>
             <form action="">
               <div className="align">
-                <i class="fas fa-envelope-square ty"></i>
+                <i className="fas fa-envelope-square ty"></i>
                 <input type="text" className="input" placeholder="Name" />
               </div>
               <div className="align">
-                <i class="fas fa-lock"></i>
+                <i className="fas fa-lock"></i>
                 <input
                   type="password"
                   className="input-field"
@@ -59,7 +59,7 @@ export default function Login() {
             <p>
               Enter your details to create <br /> an account
             </p>
-            <form action="">
+            <form>
               <button>SIGN UP</button>
             </form>
           </div>
