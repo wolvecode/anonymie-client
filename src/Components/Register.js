@@ -13,7 +13,7 @@ class Register extends React.Component {
     console.log(this.state)
   }
 
-  onChange = (key, element) => {
+  handleChange = (key, element) => {
     this.setState({
       [key]: element.target.value
     })
@@ -71,7 +71,7 @@ class Register extends React.Component {
                     placeholder="Email"
                     name="email"
                     value={email}
-                    onChange={elm => this.onChange('email', elm)}
+                    onChange={elm => this.handleChange('email', elm)}
                     required
                   />
                 </div>
@@ -82,7 +82,7 @@ class Register extends React.Component {
                     className="form"
                     placeholder="Name"
                     value={fullName}
-                    onChange={elm => this.onChange('fullName', elm)}
+                    onChange={elm => this.handleChange('fullName', elm)}
                     name="fullName"
                     required
                   />
@@ -94,7 +94,7 @@ class Register extends React.Component {
                     className="form"
                     placeholder="Password"
                     value={password}
-                    onChange={elm => this.onChange('password', elm)}
+                    onChange={elm => this.handleChange('password', elm)}
                     name="password"
                     required
                   />
