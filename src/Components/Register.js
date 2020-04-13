@@ -20,7 +20,6 @@ class Register extends React.Component {
     signUp({ fullName, email, password })
       .then(data => console.log(data))
       .catch(error => console.error(error))
-    console.log(this.state)
   }
 
   handleChange = (key, element) => {
