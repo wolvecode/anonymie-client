@@ -1,15 +1,25 @@
 import React from 'react'
+import { signUp } from '../utils/request'
 import './css/register.css'
 
 class Register extends React.Component {
   state = {
     email: '',
     password: '',
-    fullName: ''
+    fullName: '',
+    isLoading: false
   }
 
   handleSubmit = event => {
     event.preventDefault()
+    const { isLoading, email, password, fullName } = this.state
+    if (isLoading) return false
+    this.setState({
+      isLoading: true
+    })
+    signUp({ fullName, email, password })
+      .then(data => console.log(data))
+      .catch(error => console.error(error))
     console.log(this.state)
   }
 
@@ -19,7 +29,7 @@ class Register extends React.Component {
     })
   }
   render() {
-    const { email, password, fullName } = this.state
+    const { email, password, fullName, isLoading } = this.state
 
     return (
       <div className="container-fluid">
@@ -100,7 +110,7 @@ class Register extends React.Component {
                   />
                 </div>
                 <div className="align a">
-                  <button>SIGN UP</button>
+                  <button disabled={isLoading}>SIGN UP</button>
                 </div>
               </form>
             </div>
