@@ -5,7 +5,6 @@ import SugList from './Components/SugList'
 import Sidebar from './Components/Sidebar'
 import { Router } from '@reach/router'
 import Register from './Components/Register'
-import { signup } from './utils/request'
 
 class App extends React.Component {
   constructor(props) {
@@ -17,8 +16,8 @@ class App extends React.Component {
         <Login path="/" />
         <AdminSect path="/user" />
         <SugList path="/suglist" />
-        <Sidebar path="/Sidebar" />
-        <Register path="/Register" />
+        <Sidebar path="/sidebar" />
+        <Register path="/reg" />
       </Router>
     )
   }

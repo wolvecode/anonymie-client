@@ -9,7 +9,17 @@ export default function Home({ children }) {
             <i className="far fa-user"></i>
             <p>nonymi</p>
           </div>
-          <p className="sign-text">Choose suggestion for comment</p>
+          <p className="sign-text">Comment Anonymously</p>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Example textarea</label>
+              <textarea
+                class=""
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+          </form>
         </div>
         <div className="col-lg-5 col-md-5 hidden-sm-down side2 p-0">
           <div className="grad1"></div>
@@ -17,7 +27,9 @@ export default function Home({ children }) {
             <div className="grad2"></div>
             <h3>Hello!</h3>
             <p>
-              Enter your details to create <br /> an account
+              Welcome to Anonymi, a platform that enables <br /> random users to
+              comment base on suggestion <br /> suggestion that relate to them
+              (express their feelings)
             </p>
           </div>
           <div className="grad3"></div>
