@@ -1,6 +1,6 @@
 import React from 'react'
+import '../style/style'
 import { signUp } from '../utils/request'
-import './css/register.css'
 
 class Register extends React.Component {
   state = {
