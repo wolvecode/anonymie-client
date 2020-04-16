@@ -1,0 +1,471 @@
+.grad1 {
+  height: 3.75rem;
+  width: 3.75rem;
+  margin-top: 3.125rem;
+  margin-left: 6.25rem;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+.grad2 {
+  margin-top: 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -0.9375rem;
+  position: absolute;
+  height: 9.375rem;
+  width: 9.375rem;
+  -webkit-clip-path: polygon(0 0, 0 51%, 45% 84%);
+          clip-path: polygon(0 0, 0 51%, 45% 84%);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+.grad3 {
+  margin-top: 1.25rem;
+  margin-left: 3.125rem;
+  position: absolute;
+  height: 3.75rem;
+  width: 3.125rem;
+  -webkit-clip-path: polygon(0 25%, 38% 0, 69% 75%, 31% 100%);
+          clip-path: polygon(0 25%, 38% 0, 69% 75%, 31% 100%);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+@media (min-width: 1200px) {
+  .grad4 {
+    margin-top: 0rem;
+    margin-left: 62%;
+    position: absolute;
+    height: 13rem;
+    width: 13.3rem;
+    -webkit-clip-path: circle(90% at 90% 100%);
+            clip-path: circle(90% at 90% 100%);
+    background: rgba(246, 241, 232, 0.1);
+  }
+}
+
+.grad6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 75%;
+  position: absolute;
+  height: 9.375rem;
+  width: 9.375rem;
+  -webkit-clip-path: polygon(100% 0, 100% 58%, 40% 90%);
+          clip-path: polygon(100% 0, 100% 58%, 40% 90%);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+.grad7 {
+  margin-left: 85%;
+  height: 3.75rem;
+  width: 3.125rem;
+  -webkit-clip-path: polygon(54% 18%, 92% 39%, 66% 96%, 27% 75%);
+          clip-path: polygon(54% 18%, 92% 39%, 66% 96%, 27% 75%);
+  background: rgba(246, 241, 232, 0.1);
+}
+
+@media (min-width: 1200px) {
+  .grad8 {
+    margin-left: 0rem;
+    position: absolute;
+    height: 9.8rem;
+    width: 9.8rem;
+    -webkit-clip-path: circle(100% at 0 100%);
+            clip-path: circle(100% at 0 100%);
+    background: rgba(246, 241, 232, 0.1);
+  }
+}
+
+body {
+  font-family: Product Sans;
+}
+
+@media (max-width: 575.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+.side {
+  height: 100%;
+  background: #fff;
+}
+
+.side1 {
+  background: #fff;
+}
+
+.side2 {
+  background: linear-gradient(313.99deg, rgba(221, 122, 120, 0.8) 0%, #d36462 71.12%);
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side3 {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+.row {
+  height: 100%;
+  background: #fff;
+}
+
+.side3 {
+  padding-left: 0rem;
+  height: 100%;
+  background: linear-gradient(313.99deg, rgba(221, 122, 120, 0.8) 0%, #d36462 71.12%);
+}
+
+.side4 {
+  background: #fff;
+}
+
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.icon i {
+  margin-left: 0.9375rem;
+  margin-top: 0.625rem;
+  font-size: 1.875rem;
+  color: #fff;
+}
+
+.icon p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 0.625rem;
+  font-size: 1.25rem;
+  color: #312d2f;
+}
+
+.icn {
+  margin-top: 3.125rem;
+}
+
+.move {
+  color: #fff;
+  padding-top: 9.125rem;
+  text-align: center;
+}
+
+.move button:hover {
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.move h3 {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.move p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+
+.sign-text {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #d36462;
+  font-weight: bold;
+  font-size: 1.875rem;
+  margin-top: 1.125rem;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.logo i {
+  margin-left: 0.9375rem;
+  margin-top: 0.9375rem;
+  font-size: 1.5625rem;
+  color: #d36462;
+}
+
+p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+button {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 3.125rem;
+  color: #fff;
+  background: #d36462;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6.25rem;
+}
+
+button:hover {
+  color: #312d2f;
+  cursor: pointer;
+}
+
+.justify {
+  color: #fff;
+  margin-top: 6.25rem;
+  text-align: center;
+}
+
+.justify h3 {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.justify button:hover {
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.justify p {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.b a:hover {
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #d36462;
+}
+
+.brand {
+  font-weight: bold;
+  height: 3.125rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 3.125rem;
+  border-radius: 50%;
+  border: 0.125rem solid #e5e5e5;
+  color: #312d2f;
+  text-align: center;
+  margin-left: 1.25rem;
+}
+
+.brand i {
+  padding-top: 0.9375rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-form {
+  padding-top: 2.5rem;
+}
+
+.my-form p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  color: #9d9d9d;
+  text-align: center;
+  font-size: 1.0625rem;
+}
+
+.my-form input {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  border: none;
+  background: rgba(49, 45, 47, 0.05);
+  border-radius: 0.25rem;
+  height: 3.75rem;
+  width: 70%;
+  font-size: 1.25rem;
+  color: #9d9d9d;
+}
+
+.my-form .align {
+  padding-top: 0.625rem;
+  text-align: center;
+}
+
+.my-form .align a {
+  color: #312d2f;
+}
+
+.my-form .align button {
+  font-weight: bold;
+  margin-top: 1.25rem;
+  border: none;
+  width: 12.5rem;
+  height: 3.125rem;
+  background: #d36462;
+  border-radius: 6.25rem;
+}
+
+.my-form i {
+  height: 3.125rem;
+  font-size: 1.875rem;
+  color: #9d9d9d;
+}
+
+::-webkit-input-placeholder {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 1.25rem;
+}
+
+:-ms-input-placeholder {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 1.25rem;
+}
+
+::-ms-input-placeholder {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 1.25rem;
+}
+
+::placeholder {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 1.25rem;
+}
+
+.underline {
+  border: 0.0625rem solid rgba(157, 157, 157, 0.5);
+  margin: auto;
+  width: 10rem;
+}
+
+.a {
+  margin-top: 1.875rem;
+}
+
+.justify {
+  color: #ffffff;
+  margin-top: 6.25rem;
+  text-align: center;
+}
+
+.justify h3 {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2.5rem;
+}
+
+.justify button {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 3.125rem;
+  color: #fff;
+  background: #d36462;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6.25rem;
+  font-weight: bold;
+}
+
+.justify button:hover {
+  background-color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #312d2f;
+}
+
+.justify p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25rem;
+}
+/*# sourceMappingURL=style.css.map */

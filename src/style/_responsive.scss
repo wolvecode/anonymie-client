@@ -1,0 +1,55 @@
+@import './variables';
+
+body {
+  font-family: Product Sans;
+}
+
+@media (max-width: 575.98px) {
+  body,
+  html {
+    font-size: $fontSize;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: $fontSize;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: $fontSize;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: $fontSize;
+  }
+}
+
+.side {
+  height: 100%;
+  background: $initialColor;
+}
+
+.side1 {
+  background: $initialColor;
+}
+.side2 {
+  background: linear-gradient(
+    313.99deg,
+    rgba(221, 122, 120, 0.8) 0%,
+    #d36462 71.12%
+  );
+}

@@ -1,0 +1,19 @@
+@import './variables';
+
+@mixin style {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin button {
+  @include style();
+  margin-top: 3.125rem;
+  color: $initialColor;
+  background: $primaryColor;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid $initialColor;
+  box-sizing: border-box;
+  border-radius: 6.25rem;
+}

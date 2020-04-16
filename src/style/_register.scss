@@ -1,0 +1,89 @@
+@import './variables';
+@import './functions';
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side3 {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+.row {
+  height: 100%;
+  background: #fff;
+}
+
+.side3 {
+  padding-left: 0rem;
+  height: 100%;
+  background: linear-gradient(
+    313.99deg,
+    rgba(221, 122, 120, 0.8) 0%,
+    #d36462 71.12%
+  );
+}
+
+.side4 {
+  background: #fff;
+}
+
+.icon {
+  display: flex;
+  i {
+    margin-left: 0.9375rem;
+    margin-top: 0.625rem;
+    font-size: 1.875rem;
+    color: #fff;
+  }
+  p {
+    @include style();
+    margin-top: 0.625rem;
+    font-size: 1.25rem;
+    color: #312d2f;
+  }
+}
+//Check later for correction
+.icn {
+  margin-top: 3.125rem;
+}
+
+.move {
+  color: #fff;
+  padding-top: 9.125rem;
+  text-align: center;
+
+  button {
+    &:hover {
+      background-color: #fff;
+      transition: 0.5s;
+    }
+  }
+
+  h3 {
+    @include style();
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  p {
+    @include style();
+    font-size: 1.25rem;
+  }
+}

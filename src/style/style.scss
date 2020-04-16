@@ -1,0 +1,178 @@
+@import './variables';
+@import './shape';
+@import './responsive';
+@import './functions';
+@import './register';
+
+.sign-text {
+  @include style();
+  text-align: center;
+  color: $primaryColor;
+  font-weight: bold;
+  font-size: 1.875rem;
+  margin-top: 1.125rem;
+}
+
+.logo {
+  display: flex;
+  i {
+    margin-left: 0.9375rem;
+    margin-top: 0.9375rem;
+    font-size: 1.5625rem;
+    color: $primaryColor;
+  }
+}
+
+p {
+  @include style();
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+
+button {
+  @include style();
+  margin-top: 3.125rem;
+  color: $initialColor;
+  background: $primaryColor;
+  width: 12.5rem;
+  height: 3.125rem;
+  border: 0.125rem solid $initialColor;
+  box-sizing: border-box;
+  border-radius: 6.25rem;
+  &:hover {
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+.justify {
+  color: $initialColor;
+  margin-top: 6.25rem;
+  text-align: center;
+  h3 {
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+  button:hover {
+    background-color: $initialColor;
+    transition: 0.5s;
+  }
+  p {
+    font-family: Product Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25rem;
+  }
+}
+
+.b {
+  display: flex;
+  justify-content: center;
+  a:hover {
+    color: $initialColor;
+    transition: 0.3s;
+    background-color: $primaryColor;
+  }
+}
+
+.brand {
+  font-weight: bold;
+  height: 3.125rem;
+  box-sizing: border-box;
+  width: 3.125rem;
+  border-radius: 50%;
+  border: 0.125rem solid #e5e5e5;
+  color: $secondaryColor;
+  text-align: center;
+  margin-left: 1.25rem;
+  i {
+    padding-top: 0.9375rem;
+    align-items: center;
+  }
+}
+
+.my-form {
+  padding-top: 2.5rem;
+  p {
+    @include style();
+    color: #9d9d9d;
+    text-align: center;
+    font-size: 1.0625rem;
+  }
+  input {
+    @include style();
+    border: none;
+    background: rgba(49, 45, 47, 0.05);
+    border-radius: 0.25rem;
+    height: 3.75rem;
+    width: 70%;
+    font-size: 1.25rem;
+    color: #9d9d9d;
+  }
+  .align {
+    padding-top: 0.625rem;
+    text-align: center;
+
+    a {
+      color: $secondaryColor;
+    }
+
+    button {
+      font-weight: bold;
+      margin-top: 1.25rem;
+      border: none;
+      width: 12.5rem;
+      height: 3.125rem;
+      background: $primaryColor;
+      border-radius: 6.25rem;
+    }
+  }
+  i {
+    height: 3.125rem;
+    font-size: 1.875rem;
+    color: #9d9d9d;
+  }
+}
+
+::placeholder {
+  @include style();
+  padding-left: 1.25rem;
+}
+
+.underline {
+  border: 0.0625rem solid rgba(157, 157, 157, 0.5);
+  margin: auto;
+  width: 10rem;
+}
+
+//track later for correction
+.a {
+  margin-top: 1.875rem;
+}
+
+.justify {
+  color: #ffffff;
+  margin-top: 6.25rem;
+  text-align: center;
+
+  h3 {
+    @include style();
+    font-size: 2.5rem;
+  }
+  button {
+    @include button();
+    font-weight: bold;
+  }
+  button:hover {
+    background-color: $initialColor;
+    transition: 0.3s;
+    color: $secondaryColor;
+  }
+
+  p {
+    @include style();
+    font-size: 1.25rem;
+  }
+}

@@ -16,7 +16,7 @@ class App extends React.Component {
         <Login path="/" />
         <AdminSect path="/user" />
         <SugList path="/suglist" />
-        <Sidebar path="/sidebar" />
+        <Sidebar path="/bar" />
         <Register path="/reg" />
       </Router>
     )
