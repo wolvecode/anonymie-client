@@ -1,0 +1,193 @@
+/* body {
+  font-family: Product Sans;
+}
+
+@media (max-width: 575.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+  .side2 {
+    display: none;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body,
+  html {
+    font-size: 12px;
+  }
+}
+
+.side {
+  height: 100%;
+  background: #fff;
+}
+
+.side1 {
+  background: #ffffff;
+}
+.side2 {
+  background: linear-gradient(
+    313.99deg,
+    rgba(221, 122, 120, 0.8) 0%,
+    #d36462 71.12%
+  );
+}
+
+.sign-text {
+  font-family: Product Sans;
+  font-weight: bold;
+  font-style: normal;
+  text-align: center;
+  color: #d36462;
+  font-weight: bold;
+  font-size: 1.875rem;
+  margin-top: 1.125rem;
+}
+.logo {
+  display: flex;
+}
+.logo i {
+  margin-left: 0.9375rem;
+  margin-top: 0.9375rem;
+  font-size: 1.5625rem;
+  color: #d36462;
+}
+p {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+}
+.b {
+  display: flex;
+  justify-content: center;
+}
+
+.brand {
+  font-weight: bold;
+  height: 3.125rem;
+  box-sizing: border-box;
+  width: 3.125rem;
+  border-radius: 50%;
+  border: 0.125rem solid #e5e5e5;
+  color: #312d2f;
+  text-align: center;
+  margin-left: 1.25rem;
+}
+.brand i {
+  padding-top: 0.9375rem;
+  align-items: center;
+}
+.my-form {
+  padding-top: 2.5rem;
+}
+.my-form p {
+  font-family: Product Sans;
+  color: #9d9d9d;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.0625rem;
+}
+
+.my-form input {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  border: none;
+  background: rgba(49, 45, 47, 0.05);
+  border-radius: 0.25rem;
+  height: 3.75rem;
+  width: 70%;
+  font-size: 1.25rem;
+  color: #9d9d9d;
+}
+
+::placeholder {
+  font-family: Product sans;
+  font-weight: normal;
+  font-style: normal;
+  padding-left: 1.25rem;
+}
+.my-form .align {
+  padding-top: 0.625rem;
+  text-align: center;
+}
+
+.my-form i {
+  height: 3.125rem;
+  font-size: 1.875rem;
+  color: #9d9d9d;
+}
+
+.align a {
+  color: #312d2f;
+}
+.underline {
+  border: 0.0625rem solid rgba(157, 157, 157, 0.5);
+  margin: auto;
+  width: 10rem;
+}
+.a {
+  margin-top: 1.875rem;
+}
+
+.align button {
+  margin-top: 1.25rem;
+  border: none;
+  width: 12.5rem;
+  height: 3.125rem;
+  background: #d36462;
+  border-radius: 6.25rem;
+}
+
+.justify {
+  color: #ffffff;
+  margin-top: 6.25rem;
+  text-align: center;
+}
+
+.justify h3 {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.justify button:hover {
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.justify p {
+  font-family: Product Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+.b a:hover {
+  color: #fff;
+  transition: 0.5s;
+  background-color: #d36462;
+} */

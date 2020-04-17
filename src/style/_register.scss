@@ -27,7 +27,7 @@
 
 .row {
   height: 100%;
-  background: #fff;
+  background: $initialColor;
 }
 
 .side3 {
@@ -41,7 +41,7 @@
 }
 
 .side4 {
-  background: #fff;
+  background: $initialColor;
 }
 
 .icon {
@@ -50,13 +50,13 @@
     margin-left: 0.9375rem;
     margin-top: 0.625rem;
     font-size: 1.875rem;
-    color: #fff;
+    color: $initialColor;
   }
   p {
     @include style();
     margin-top: 0.625rem;
     font-size: 1.25rem;
-    color: #312d2f;
+    color: $secondaryColor;
   }
 }
 //Check later for correction
@@ -65,13 +65,13 @@
 }
 
 .move {
-  color: #fff;
+  color: $initialColor;
   padding-top: 9.125rem;
   text-align: center;
 
   button {
     &:hover {
-      background-color: #fff;
+      background-color: $initialColor;
       transition: 0.5s;
     }
   }
