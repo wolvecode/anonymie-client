@@ -131,6 +131,68 @@ body {
   background: linear-gradient(313.99deg, rgba(221, 122, 120, 0.8) 0%, #d36462 71.12%);
 }
 
+#body-row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#sidebar-container {
+  min-height: 100vh;
+  background: #d36462;
+  padding: 0;
+}
+
+#sidebar-container a:active {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar sizes when expanded and expanded */
+.sidebar-expanded {
+  width: 230px;
+}
+
+.sidebar-collapsed {
+  padding-left: 15px;
+  width: 110px;
+}
+
+.b-color {
+  border: none;
+  border-radius: none;
+  padding: 15px;
+  color: #fff;
+  background: #d36462;
+}
+
+.list-group a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.logo-s {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  width: 8rem;
+  color: #fff;
+}
+
+.logo-s .far {
+  display: inline;
+  color: #000000;
+}
+
+.logo-s .line {
+  border: 0.0625rem solid rgba(157, 157, 157, 0.5);
+  margin: auto;
+  width: 6rem;
+  margin-bottom: 40px;
+}
+
+.menu-down {
+  margin-bottom: auto;
+}
+
 @media screen and (max-width: 768px) {
   body,
   html {
