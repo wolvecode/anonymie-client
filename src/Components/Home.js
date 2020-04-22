@@ -11,9 +11,10 @@ export default function Home({ children }) {
             <p>nonymi</p>
           </div>
           <p className="sign-text">Comment Anonymously</p>
-          <form className="text-center select-op">
-            <div className="justify-content-center">
-              <select class="form-control col-md-4 m-4">
+          <form className="text-center">
+            <div className="form-inline">
+              <h3 className="mr-3">Choose suggestion</h3>
+              <select class="form-control form-inline col-md-4 mt-4 mb-4">
                 <option>Lorem ipsum dolor sit amet.</option>
                 <option>Lorem ipsum dolor sit amet.</option>
                 <option>Lorem ipsum dolor sit amet.</option>
@@ -21,7 +22,7 @@ export default function Home({ children }) {
                 <option>Lorem ipsum dolor sit amet</option>
               </select>
             </div>
-            <div class="form-group ">
+            <div>
               <textarea
                 className="m-auto display-block"
                 id="exampleFormControlTextarea1"
@@ -29,7 +30,7 @@ export default function Home({ children }) {
                 cols="50"
               ></textarea>
             </div>
-            <div className="but text-center">
+            <div className="">
               <button>Submit</button>
             </div>
           </form>

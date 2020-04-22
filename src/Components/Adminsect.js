@@ -1,7 +1,6 @@
 import React from 'react'
 import Home from './Home'
 import Modal from './Modal'
-import './css/style.css'
 
 export default function AdminSect() {
   return (
