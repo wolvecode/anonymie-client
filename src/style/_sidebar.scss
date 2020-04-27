@@ -14,26 +14,35 @@
 /* Sidebar sizes when expanded and expanded */
 .sidebar-expanded {
   width: 14rem;
+  font-size: 15px;
   justify-content: center;
   .line {
     border: 0.0625rem solid rgba(157, 157, 157, 0.5);
     width: 12rem;
   }
-  a {
+  a,
+  a:visited {
+    color: #fff;
+    background: #d36462;
     width: 170px;
+    padding: 15px;
     &:hover {
       border-radius: 3px;
       width: 180px;
     }
     &:active {
-      background: yellow;
-      width: 180px;
+      border-radius: 5px;
     }
   }
 }
 .sidebar-collapsed {
   width: 7rem;
-  a {
+  font-size: 15px;
+  a,
+  a:visited {
+    color: #fff;
+    background: #d36462;
+    padding: 18px;
     width: 4.5rem;
     &:hover {
       border-radius: 3px;
@@ -48,6 +57,11 @@
   padding: 15px;
   color: #fff;
   background: #d36462;
+  &:active {
+    background: #000;
+    color: blue;
+    background-color: black;
+  }
 }
 .list-group a:hover {
   background: rgba(255, 255, 255, 0.2);
