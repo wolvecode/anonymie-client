@@ -9,9 +9,9 @@ export class Stat extends React.Component {
   }
   render() {
     const options = {
-      animationEnabled: true,
+      animationEnabled: false ,
       title: {
-        text: 'Customer Satisfaction'
+        text: 'Comment Stats'
       },
       subtitles: [
         {

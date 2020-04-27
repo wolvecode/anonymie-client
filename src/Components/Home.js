@@ -12,25 +12,32 @@ export default function Home({ children }) {
           </div>
           <p className="sign-text">Comment Anonymously</p>
           <form className="text-center">
-            <div className="form-inline">
-              <h3 className="mr-3">Choose suggestion</h3>
-              <select class="form-control form-inline col-md-4 mt-4 mb-4">
+            <div className="form-inline d-flex justify-content-center">
+              <h3 className=" justify-content-center mr-3">
+                Choose suggestion
+              </h3>
+              <select className="form-control form-inline col-md-4 mt-4 mb-4">
+                <option>Select</option>
                 <option>Lorem ipsum dolor sit amet.</option>
                 <option>Lorem ipsum dolor sit amet.</option>
                 <option>Lorem ipsum dolor sit amet.</option>
-                <option>Lorem ipsum dolor sit amet.</option>
+                <option>
+                  \Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Voluptates beatae labore maxime repellat perspiciatis quod
+                </option>
                 <option>Lorem ipsum dolor sit amet</option>
               </select>
             </div>
             <div>
               <textarea
-                className="m-auto display-block"
+                className="m-auto d-block"
+                name="comment"
                 id="exampleFormControlTextarea1"
                 rows="10"
                 cols="50"
               ></textarea>
             </div>
-            <div className="">
+            <div className="d-flex justify-content-around">
               <button>Submit</button>
             </div>
           </form>
