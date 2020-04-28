@@ -35,7 +35,7 @@ class Login extends React.Component {
           <div className="col-lg-7 col-md-7  side1 p-0">
             <div className="logo">
               <i className="far fa-user"></i>
-              <p className="pt-2 ">nonymi</p>
+              <p className="pt-2">nonymi</p>
             </div>
             <p className="sign-text">Sign in to Dashboard</p>
             <div className="b">

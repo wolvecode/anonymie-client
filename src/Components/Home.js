@@ -1,7 +1,7 @@
 import React from 'react'
 import '../style/style'
 
-export default function Home({ children }) {
+export default function User() {
   return (
     <div className="container-fluid">
       <div className="row">

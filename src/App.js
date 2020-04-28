@@ -1,11 +1,10 @@
 import React from 'react'
 import Login from './Components/Login'
-import AdminSect from './Components/Adminsect'
+import User from './Components/Home'
 import CommentStat from './Components/CommentStat'
 import Sidebar from './Components/Sidebar'
-import { SugInteraction as EditSug } from './Components/SugInteraction'
+import SuggestionList from './Components/SugThread'
 import { Router } from '@reach/router'
-import { Home } from './Components/Home'
 import Register from './Components/Register'
 
 class App extends React.Component {
@@ -16,8 +15,8 @@ class App extends React.Component {
     return (
       <Router>
         <Login path="/" />
-        <EditSug path="sug" />
-        <AdminSect path="/user" />
+        <SuggestionList path="sug" />
+        <User path="/user" />
         <CommentStat path="/stat" />
         <Sidebar path="/bar" />
         <Register path="/reg" />
