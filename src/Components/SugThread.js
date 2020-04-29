@@ -1,67 +1,69 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import axios from 'axios'
+import '../style/style.css'
 
-// const Exercise = props => (
-//   <tr>
-//     <td>{props.exercise.username}</td>
-//     <td>{props.exercise.description}</td>
-//     <td>{props.exercise.duration}</td>
-//     <td>{props.exercise.date.substring(0, 10)}</td>
-//     <td>
-//       <a href={'/edit/' + props.exercise._id}>Edit</a>|
-//       <a
-//         href="#"
-//         onClick={() => {
-//           props.deleteExercise(props.exercise._id)
-//         }}
-//       >
-//         delete
-//       </a>
-//     </td>
-//   </tr>
-// )
+const Suggestion = props => (
+  <tr>
+    <td>{props.suggestion.id}</td>
+    <td>{props.suggestion.title}</td>
+    <td>{props.suggestion.date.substring(0, 10)}</td>
+    <td>
+      <a href={'/edit/' + props.exercise._id}>Edit</a>|
+      <a
+        href="#"
+        onClick={() => {
+          props.deleteSuggestion(props.exercise._id)
+        }}
+      >
+        delete
+      </a>
+    </td>
+  </tr>
+)
 
-export default class SuggestionList extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     exercises: []
-  //   }
-  //   this.deleteExercise = this.deleteExercise.bind(this)
-  // }
-  // componentDidMount() {
-  //   axios
-  //     .get('http://localhost:5555/exercise')
-  //     .then(res => {
-  //       this.setState({
-  //         exercises: res.data
-  //       })
-  //     })
-  //     .catch(err => {
-  //       console.log(err)
-  //     })
-  // }
+export default class SuggestionLog extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      suggestions: []
+    }
+    this.deleteSuggestion = this.deleteSuggestion.bind(this)
+  }
+  componentDidMount() {
+    axios
+      .get('localhost:5000/suggestion')
+      .then(res => {
+        console.log(res.data)
+        this.setState({
+          suggestions: res.data
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
-  // deleteExercise(id) {
-  //   axios.delete('http://localhost:5555/exercise' + id).then(res => {
-  //     console.log(res.data)
-  //     this.setState({
-  //       exercises: this.state.exercises.filter(el => el._id !== id)
-  //     })
-  //   })
-  // }
+  deleteSuggestion(id) {
+    axios.delete('localhost:5000/suggestion' + id).then(res => {
+      console.log(res.data)
+      this.setState({
+        suggestions: this.state.exercises.filter(el => el._id !== id)
+      })
+    })
+  }
 
-  // exerciseList() {
-  //   return this.state.exercises.map(currentexercise => {
-  //     return (
-  //       <Exercise
-  //         exercise={currentexercise}
-  //         deleteExercise={this.deleteExercise}
-  //         key={currentexercise._id}
-  //       />
-  //     )
-  //   })
-  // }
+  suggestionList() {
+    return this.state.suggestions.map(currentsuggestion => {
+      return (
+        <Suggestion
+          suggestion={currentsuggestion}
+          deleteSuggestion={this.deleteSuggestion}
+          key={currentsuggestion._id}
+        />
+      )
+    })
+  }
   render() {
     return (
       <Sidebar>
@@ -76,7 +78,7 @@ export default class SuggestionList extends React.Component {
                 <th>Actions</th>
               </tr>
             </thead>
-            {/* <tbody>{this.exerciseList()}</tbody> */}
+            <tbody>{this.suggestionList()}</tbody>
           </table>
         </div>
       </Sidebar>
