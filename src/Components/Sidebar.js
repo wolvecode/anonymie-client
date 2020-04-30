@@ -5,10 +5,7 @@ export default function Sidebar({ children }) {
   return (
     <div>
       <div className="row" id="body-row">
-        <div
-          id="sidebar-container"
-          className="sidebar-expanded d-none d-md-block"
-        >
+        <div id="sidebar-container" className="fixed-top sidebar-expanded">
           <div>
             <div className="logo-s justify-content-center pt-2">
               <i className="far fa-user pt-2"></i>
@@ -18,29 +15,6 @@ export default function Sidebar({ children }) {
           </div>
 
           <ul className="list-group pl-4">
-            {/* <a
-              href="#submenu1"
-              data-toggle="collapse"
-              aria-expanded="false"
-              className="b-st list-group-item align-items-start"
-            >
-              <div className="d-flex w-100 justify-content-center align-items-center">
-                <span className="fa fa-dashboard fa-fw mr-3"></span>
-                <span className="menu-collapsed dropdown-toggle">
-                  Dashboard
-                </span>
-                <span className="submenu-icon ml-auto"></span>
-              </div>
-            </a>
-
-            <div id="submenu1" className="collapse sidebar-submenu">
-              <a
-                href="#"
-                className="list-group-item list-group-item-action b-st text-white"
-              >
-                <span className="menu-collapsed">Chahgag</span>
-              </a>
-            </div> */}
             <a
               href="/bar"
               className="b-st list-group-item list-group-item-action"

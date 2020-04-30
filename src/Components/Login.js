@@ -98,7 +98,9 @@ class Login extends React.Component {
                 Enter your details to create <br /> an account
               </p>
               <form>
-                <button>SIGN UP</button>
+                <a href="/reg">
+                  <button>SIGN UP</button>
+                </a>
               </form>
             </div>
             <div className="grad3"></div>
