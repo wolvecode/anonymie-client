@@ -21,18 +21,3 @@ exports.login = (email, password) => {
     }
   }).then(res => res.json())
 }
-
-exports.createSuggestion = (title, description) => {
-  return fetch(baseUrl + 'suggestion', {
-    method: 'post',
-    body: JSON.stringify(title, description),
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(res => res.json())
-}
-
-exports.getComtBySugId = () => {
-  return fetch(baseUrl + 'getcomementbysugid')
-}

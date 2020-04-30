@@ -5,15 +5,15 @@ import '../style/style.css'
 
 const Suggestion = props => (
   <tr>
-    <td>{props.suggestion.id}</td>
+    <td>{props.suggestion._id}</td>
     <td>{props.suggestion.title}</td>
     <td>{props.suggestion.date.substring(0, 10)}</td>
     <td>
-      <a href={'/edit/' + props.exercise._id}>Edit</a>|
+      <a href={'/edit/' + props.suggestion._id}>Edit</a>|
       <a
         href="#"
         onClick={() => {
-          props.deleteSuggestion(props.exercise._id)
+          props.deleteSuggestion(props.suggestion._id)
         }}
       >
         delete
@@ -32,9 +32,8 @@ export default class SuggestionLog extends React.Component {
   }
   componentDidMount() {
     axios
-      .get('localhost:5000/suggestion')
+      .get('http://localhost:5000/suggestion/')
       .then(res => {
-        console.log(res.data)
         this.setState({
           suggestions: res.data
         })
@@ -45,10 +44,10 @@ export default class SuggestionLog extends React.Component {
   }
 
   deleteSuggestion(id) {
-    axios.delete('localhost:5000/suggestion' + id).then(res => {
+    axios.delete('http://localhost:5000/suggestion/' + id).then(res => {
       console.log(res.data)
       this.setState({
-        suggestions: this.state.exercises.filter(el => el._id !== id)
+        suggestions: this.state.suggestions.filter(el => el._id !== id)
       })
     })
   }
@@ -66,22 +65,24 @@ export default class SuggestionLog extends React.Component {
   }
   render() {
     return (
-      <Sidebar>
-        <div className="col-md-8 offset-md-2 pt-5">
-          <h3>Suggestion List</h3>
-          <table className="table">
-            <thead className="thead-light">
-              <tr>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Date</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>{this.suggestionList()}</tbody>
-          </table>
-        </div>
-      </Sidebar>
+      <div>
+        <Sidebar>
+          <div className="col-md-8 offset-md-2 pt-5">
+            <h3>Suggestion List</h3>
+            <table className="table">
+              <thead className="thead-light">
+                <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>Date</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>{this.suggestionList()}</tbody>
+            </table>
+          </div>
+        </Sidebar>
+      </div>
     )
   }
 }
