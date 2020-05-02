@@ -48,8 +48,7 @@ export default class EditSuggestion extends React.Component {
 
     const suggestion = {
       title: this.state.title,
-      description: this.state.description,
-      date: this.state.date
+      description: this.state.description
     }
 
     axios
@@ -76,12 +75,13 @@ export default class EditSuggestion extends React.Component {
               </div>
               <div className="form-group">
                 <label>Description</label>
-                <input
-                  type="text"
+                <textarea
                   className="form-control"
                   value={this.state.description}
                   onChange={this.onChangeDescription}
-                />
+                  cols="30"
+                  rows="5"
+                ></textarea>
               </div>
               <div>
                 <input

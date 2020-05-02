@@ -7,6 +7,8 @@ import EditSuggestion from './Components/EditSuggestion'
 import SuggestionLog from './Components/SugThread'
 import { Router } from '@reach/router'
 import Register from './Components/Register'
+import ComThread from './Components/StaredComment'
+import General from './Components/General'
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +20,8 @@ class App extends React.Component {
         <Login path="/" />
         <SuggestionLog path="sug" />
         <User path="/user" />
+        <General path="general" />
+        <ComThread path="/suggestion/comment/:id" />
         <EditSuggestion path="/edit/:id" />
         <CommentStat path="/stat" />
         <Sidebar path="/bar" />
