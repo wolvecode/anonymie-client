@@ -71,7 +71,7 @@ export default function Sidebar({ children }) {
                 >
                   <div className="d-flex w-100 justify-content-center align-items-center">
                     <span className="fa fa-question fa-fw mr-3"></span>
-                    <span className="menu-collapsed">Stared Comment</span>
+                    <span className="menu-collapsed">Comment</span>
                     <span className="submenu-icon ml-auto"></span>
                   </div>
                 </a>

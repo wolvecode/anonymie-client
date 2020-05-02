@@ -4,12 +4,13 @@ import axios from 'axios'
 import '../style/style.css'
 
 const Suggestion = props => (
-  <tr>
-    <td>{props.suggestion._id}</td>
-    <td>{props.suggestion.title}</td>
-    <td>{props.suggestion.date.substring(0, 10)}</td>
-    <td>
+  <tr className="table-row border">
+    <td className="p-3 m-2">{props.suggestion._id}</td>
+    <td className="el-style">{props.suggestion.title}</td>
+    <td className="el-style">{props.suggestion.date.substring(0, 10)}</td>
+    <td className="el-style">
       <a href={'/edit/' + props.suggestion._id}>Edit</a>|
+      <a href={'/suggestion/comment/' + props.suggestion._id}>Comment</a>|
       <a
         href="#"
         onClick={() => {
@@ -67,15 +68,15 @@ export default class SuggestionLog extends React.Component {
     return (
       <div>
         <Sidebar>
-          <div className="col-md-8 offset-md-2 pt-5">
-            <h3>Suggestion List</h3>
+          <div className="col-md-10 offset-md-2 pt-3">
+            <h3 className="sug-header">Suggestion List</h3>
             <table className="table">
-              <thead className="thead-light">
+              <thead className="table-head">
                 <tr>
-                  <th>ID</th>
-                  <th>Title</th>
-                  <th>Date</th>
-                  <th>Actions</th>
+                  <th className="el-style">ID</th>
+                  <th className="el-style">Title</th>
+                  <th className="el-style">Date</th>
+                  <th className="el-style">Actions</th>
                 </tr>
               </thead>
               <tbody>{this.suggestionList()}</tbody>
