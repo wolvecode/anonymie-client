@@ -32,7 +32,7 @@ class Register extends React.Component {
 
     return (
       <div className="container-fluid">
-        <div className="row">
+        <div className="row side-reg">
           <div className="col-lg-5 col-md-5 side3">
             <div className="icon">
               <i className="far fa-user"></i>
