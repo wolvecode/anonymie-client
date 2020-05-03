@@ -1,0 +1,19 @@
+@import './functions';
+@import './variables';
+
+.sug-header {
+  @include style();
+  color: $primaryColor;
+  font-weight: bold;
+}
+.table-head {
+  background: #b4b4b4;
+}
+.table-row {
+  border: 1 solid;
+}
+
+.el-style {
+  @include style();
+  font-weight: normal;
+}

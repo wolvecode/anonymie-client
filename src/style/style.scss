@@ -35,6 +35,8 @@ p {
 
 button {
   @include style();
+  font-size: 17px;
+  font-weight: bold;
   margin-top: 3.125rem;
   color: $initialColor;
   background: $primaryColor;
@@ -93,6 +95,7 @@ button {
   margin-left: 1.25rem;
   i {
     padding-top: 0.9375rem;
+    font-size: 17px;
     align-items: center;
   }
 }
@@ -126,6 +129,7 @@ button {
     button {
       font-weight: bold;
       margin-top: 1.25rem;
+      font-size: 17px;
       border: none;
       width: 12.5rem;
       height: 3.125rem;

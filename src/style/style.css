@@ -456,6 +456,8 @@ button {
   font-family: Product Sans;
   font-weight: normal;
   font-style: normal;
+  font-size: 17px;
+  font-weight: bold;
   margin-top: 3.125rem;
   color: #fff;
   background: #d36462;
@@ -529,6 +531,7 @@ button:hover {
 
 .brand i {
   padding-top: 0.9375rem;
+  font-size: 17px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -572,6 +575,7 @@ button:hover {
 .my-form .align button {
   font-weight: bold;
   margin-top: 1.25rem;
+  font-size: 17px;
   border: none;
   width: 12.5rem;
   height: 3.125rem;
