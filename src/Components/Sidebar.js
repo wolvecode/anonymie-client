@@ -103,7 +103,7 @@ export default function Sidebar({ children }) {
           </ul>
         </div>
         {/* Editable Content */}
-        <div className="col">{children}</div>
+        <div className="col bg-light">{children}</div>
       </div>
     </div>
   )
