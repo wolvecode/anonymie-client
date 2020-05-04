@@ -70,8 +70,8 @@ export default class SuggestionLog extends React.Component {
         <Sidebar>
           <div className="col-md-10 offset-md-2 pt-3">
             <h3 className="sug-header">Suggestion List</h3>
-            <table className="table">
-              <thead className="table-head">
+            <table className="table ">
+              <thead className="table-head thead-light">
                 <tr>
                   <th className="el-style">ID</th>
                   <th className="el-style">Title</th>
