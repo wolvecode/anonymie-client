@@ -1,6 +1,5 @@
 import React from 'react'
 import '../style/style'
-import { description } from 'joi'
 
 export default class User extends React.Component {
   constructor(props) {
