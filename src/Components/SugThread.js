@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from './Sidebar'
+import Modal from './Modal'
 import axios from 'axios'
-import '../style/style.css'
 
 const Suggestion = props => (
   <tr className="table-row border">
@@ -81,6 +81,7 @@ export default class SuggestionLog extends React.Component {
               </thead>
               <tbody>{this.suggestionList()}</tbody>
             </table>
+            <Modal />
           </div>
         </Sidebar>
       </div>
