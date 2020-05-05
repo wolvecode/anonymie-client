@@ -1,0 +1,41 @@
+@import './variables';
+@import './functions';
+
+.b-p {
+  padding-left: 8px;
+  margin-left: auto;
+  width: 50px;
+}
+
+.modal-body button {
+  @include style();
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 3.125rem;
+  color: $initialColor;
+  background: $primaryColor;
+  width: 10.5rem;
+  padding-left: 35px;
+  height: 3.125rem;
+  border: 0.125rem solid $initialColor;
+  box-sizing: border-box;
+  border-radius: 6.25rem;
+  &:hover {
+    background: $primaryColor;
+    border: none;
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+}
+.modal-body {
+  @include style();
+  font-size: 17px;
+  font-weight: bold;
+}
+.modal-header {
+  @include style();
+  font-weight: bold;
+  color: $primaryColor;
+  font-size: 17px;
+  font-weight: bold;
+}
