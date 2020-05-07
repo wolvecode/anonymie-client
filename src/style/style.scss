@@ -2,12 +2,12 @@
 @import './shape';
 @import './comment';
 @import './responsive';
+@import './user';
 @import './functions';
-@import './home';
+@import './usercomment';
 @import './sidebar';
 @import './modal';
 @import './register';
-@import './user';
 
 .sign-text {
   @include style();
@@ -36,7 +36,7 @@ p {
 
 button {
   @include style();
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
   margin-top: 3.125rem;
   color: $initialColor;
@@ -162,7 +162,7 @@ button {
 }
 
 .justify {
-  color: #ffffff;
+  color: #fff;
   margin-top: 6.25rem;
   text-align: center;
 
@@ -184,4 +184,12 @@ button {
     @include style();
     font-size: 1.25rem;
   }
+}
+
+table {
+  table-layout: fixed;
+}
+
+table td {
+  overflow: hidden;
 }

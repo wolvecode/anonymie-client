@@ -2,20 +2,20 @@
 @import './functions';
 
 .b-p {
-  padding-left: 8px;
+  padding-left: 0.5rem;
   margin-left: auto;
-  width: 50px;
+  width: 3.125rem;
 }
 
 .modal-body button {
   @include style();
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
-  margin-top: 3.125rem;
+  margin-top: 50px;
   color: $initialColor;
   background: $primaryColor;
-  width: 10.5rem;
-  padding-left: 35px;
+  width: 11rem;
+  padding-left: 2.1875rem;
   height: 3.125rem;
   border: 0.125rem solid $initialColor;
   box-sizing: border-box;
@@ -29,13 +29,13 @@
 }
 .modal-body {
   @include style();
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
 }
 .modal-header {
   @include style();
   font-weight: bold;
   color: $primaryColor;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
 }

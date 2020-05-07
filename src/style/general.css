@@ -1,33 +1,16 @@
 body {
   font-family: Product Sans;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
-
-/* @media (max-width: 575.98px) {
-  body,
-  html {
-    font-size: 12px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  body,
-  html {
-    font-size: 12;
-  }
-} */
 
 #cont {
-  /* display: block;
-  width: 100%; */
   background: #fff;
-  /* padding: 14px 20px; */
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.0625rem 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3);
 }
 
 /* comments area */
@@ -40,69 +23,56 @@ ul .cmmnt,
 ul ul .cmmnt {
   display: block;
   position: relative;
-  padding-left: 65px;
+  padding-left: 4.0625rem;
   box-sizing: border-box;
 }
 
 #comments .cmmnt .avatar {
   position: absolute;
-  top: 8px;
+  top: 0.5rem;
   left: 0;
 }
-/* #comments .cmmnt .avatar img {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
-  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.44);
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
-} */
 
 #comments .cmmnt .avatar a:hover img {
   opacity: 0.77;
 }
 
 #comments .cmmnt .cmmnt-content {
-  padding: 0px 3px;
-  padding-bottom: 12px;
-  padding-top: 8px;
+  padding: 0rem 0.1875rem;
+  padding-bottom: 0.75rem;
+  padding-top: 0.5rem;
 }
 
 #comments .cmmnt .cmmnt-content header {
   font-size: 1.3em;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 #comments .cmmnt .cmmnt-content header .pubdate {
   font-family: 'Product Sans', Regular;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #9d9d9d;
 }
 #comments .cmmnt .cmmnt-content header .userlink {
   font-family: 'Product Sans', Regular;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #d36462;
 }
 
 #comments .cmmnt .replies {
-  margin-bottom: 7px;
+  margin-bottom: 0.4375rem;
 }
 p {
   font-family: ' Product Sans', Light;
-  font-size: 17px;
+  font-size: 1.0625rem;
 }
 
 .na {
   font-family: 'Product Sans', Regular;
   font-family: ' Product Sans', Light;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #d36462;
 }
 
@@ -110,18 +80,36 @@ p {
   color: #d36462;
 }
 
-.ab {
-  padding-top: 100px;
-  box-sizing: border-box;
+@media (max-width: 991.98px) {
+  .ab {
+    padding-top: 8.25rem;
+    box-sizing: border-box;
+  }
 }
 
+@media (min-width: 992px) {
+  .ab {
+    padding-top: 6.25rem;
+    box-sizing: border-box;
+  }
+}
 .comment {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
   box-sizing: border-box;
 }
 
 .count {
   font-family: 'Product Sans', Regular;
-  font-size: 17px;
+  font-size: 1.0625rem;
   color: #9d9d9d;
+}
+
+.cmmnt-content a {
+  text-decoration: none;
+  color: #312d2f;
+}
+
+.cmmnt-content a:hover {
+  color: #312d2f;
+  text-decoration: underline;
 }

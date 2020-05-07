@@ -4,7 +4,7 @@ body {
   font-family: Product Sans;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 35.9988rem) {
   body,
   html {
     font-size: $fontSize;
@@ -14,7 +14,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   body,
   html {
     font-size: $fontSize;
@@ -24,14 +24,14 @@ body {
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
     font-size: $fontSize;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
     font-size: $fontSize;

@@ -84,8 +84,8 @@
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3.75rem;
+  height: 2.125rem;
 }
 
 /* Hide default HTML checkbox */
@@ -111,10 +111,10 @@
 .slider:before {
   position: absolute;
   content: '';
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 1.625rem;
+  width: 1.625rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
   background-color: #fff;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -125,18 +125,18 @@ input:checked + .slider {
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #2196f3;
-          box-shadow: 0 0 1px #2196f3;
+  -webkit-box-shadow: 0 0 0.0625rem #2196f3;
+          box-shadow: 0 0 0.0625rem #2196f3;
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(1.625rem);
+  transform: translateX(1.625rem);
 }
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 34px;
+  border-radius: 2.125rem;
 }
 
 .slider.round:before {
@@ -147,37 +147,37 @@ body {
   font-family: Product Sans;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 35.9988rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .side2 {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .side2 {
     display: none;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -200,8 +200,45 @@ body {
   width: 100%;
 }
 
-textarea {
-  background-color: rgba(49, 45, 47, 0.05);
+.user-comment textarea {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-weight: bold;
+  color: #d36462;
+  font-size: 1.0625rem;
+}
+
+.user-comment button {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.0625rem;
+  padding-left: 2.5rem;
+  font-weight: bold;
+  margin-top: 3.125rem;
+  color: #fff;
+  background: #d36462;
+  width: 10rem;
+  height: 3.125rem;
+  border: 0.125rem solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 6.25rem;
+}
+
+.user-comment button:hover {
+  color: #312d2f;
+  cursor: pointer;
+}
+
+form span {
+  font-family: Product Sans;
+  font-weight: normal;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 1.125rem;
+  color: #d36462;
 }
 
 #body-row {
@@ -217,7 +254,7 @@ textarea {
 
 .sidebar-expanded {
   width: 14rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -232,44 +269,44 @@ textarea {
 .sidebar-expanded a:visited {
   color: #fff;
   background: #d36462;
-  width: 170px;
-  padding: 15px;
+  width: 10.625rem;
+  padding: 0.9375rem;
 }
 
 .sidebar-expanded a:hover,
 .sidebar-expanded a:visited:hover {
-  border-radius: 3px;
-  width: 180px;
+  border-radius: 0.1875rem;
+  width: 11.25rem;
 }
 
 .sidebar-expanded a:active,
 .sidebar-expanded a:visited:active {
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 .sidebar-collapsed {
   width: 7rem;
-  font-size: 15px;
+  font-size: 0.9375rem;
 }
 
 .sidebar-collapsed a,
 .sidebar-collapsed a:visited {
   color: #fff;
   background: #d36462;
-  padding: 18px;
+  padding: 1.125rem;
   width: 4.5rem;
 }
 
 .sidebar-collapsed a:hover,
 .sidebar-collapsed a:visited:hover {
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   width: 4.5rem;
 }
 
 .b-st {
   border: none;
   border-radius: none;
-  padding: 15px;
+  padding: 0.9375rem;
   color: #fff;
   background: #d36462;
 }
@@ -288,7 +325,7 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 18px;
+  font-size: 1.125rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,8 +339,8 @@ textarea {
   font-weight: normal;
   font-style: normal;
   color: #000;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 }
 
 .line {
@@ -323,22 +360,22 @@ textarea {
 }
 
 .b-p {
-  padding-left: 8px;
+  padding-left: 0.5rem;
   margin-left: auto;
-  width: 50px;
+  width: 3.125rem;
 }
 
 .modal-body button {
   font-family: Product Sans;
   font-weight: normal;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
-  margin-top: 3.125rem;
+  margin-top: 50px;
   color: #fff;
   background: #d36462;
-  width: 10.5rem;
-  padding-left: 35px;
+  width: 11rem;
+  padding-left: 2.1875rem;
   height: 3.125rem;
   border: 0.125rem solid #fff;
   -webkit-box-sizing: border-box;
@@ -357,7 +394,7 @@ textarea {
   font-family: Product Sans;
   font-weight: normal;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
 }
 
@@ -367,31 +404,31 @@ textarea {
   font-style: normal;
   font-weight: bold;
   color: #d36462;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .side3 {
     display: none;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 61.9988rem) {
   body,
   html {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
@@ -401,7 +438,7 @@ textarea {
 }
 
 .side3 {
-  padding-left: 0rem;
+  padding-left: 0px;
   height: 100%;
   background: linear-gradient(313.99deg, rgba(221, 122, 120, 0.8) 0%, #d36462 71.12%);
 }
@@ -463,12 +500,6 @@ textarea {
   font-size: 1.25rem;
 }
 
-body {
-  background: #e5e5e5;
-  height: 100%;
-  width: 100%;
-}
-
 .sign-text {
   font-family: Product Sans;
   font-weight: normal;
@@ -505,7 +536,7 @@ button {
   font-family: Product Sans;
   font-weight: normal;
   font-style: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: bold;
   margin-top: 3.125rem;
   color: #fff;
@@ -677,7 +708,7 @@ button:hover {
 }
 
 .justify {
-  color: #ffffff;
+  color: #fff;
   margin-top: 6.25rem;
   text-align: center;
 }
@@ -717,5 +748,13 @@ button:hover {
   font-weight: normal;
   font-style: normal;
   font-size: 1.25rem;
+}
+
+table {
+  table-layout: fixed;
+}
+
+table td {
+  overflow: hidden;
 }
 /*# sourceMappingURL=style.css.map */
