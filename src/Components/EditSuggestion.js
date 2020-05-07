@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import Sidebar from './Sidebar'
-import { navigate, useParams } from '@reach/router'
+import { navigate } from '@reach/router'
 
 export default class EditSuggestion extends React.Component {
   constructor(props) {
@@ -11,8 +11,8 @@ export default class EditSuggestion extends React.Component {
       description: '',
       users: []
     }
-    this.onChangeTitle = this.onChangeTitle.bind(this)
-    this.onChangeDescription = this.onChangeDescription.bind(this)
+
+    this.handleChange = this.handleChange.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
   }
 
@@ -30,16 +30,9 @@ export default class EditSuggestion extends React.Component {
         console.log(err)
       })
   }
-
-  onChangeTitle(e) {
+  handleChange(key, e) {
     this.setState({
-      title: e.target.value
-    })
-  }
-
-  onChangeDescription(e) {
-    this.setState({
-      description: e.target.value
+      [key]: e.target.value
     })
   }
 
@@ -70,7 +63,7 @@ export default class EditSuggestion extends React.Component {
                   type="text"
                   className="form-control"
                   value={this.state.title}
-                  onChange={this.onChangeTitle}
+                  onChange={elm => this.handleChange('title', elm)}
                 />
               </div>
               <div className="form-group">
@@ -78,7 +71,7 @@ export default class EditSuggestion extends React.Component {
                 <textarea
                   className="form-control"
                   value={this.state.description}
-                  onChange={this.onChangeDescription}
+                  onChange={elm => this.handleChange('description', elm)}
                   cols="30"
                   rows="5"
                 ></textarea>
