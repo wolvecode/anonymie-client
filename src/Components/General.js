@@ -9,6 +9,8 @@ export default class General extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      id: [],
+      count: 3,
       thread: []
     }
   }
@@ -17,9 +19,9 @@ export default class General extends React.Component {
     axios
       .get('http://localhost:5000/suggestion/')
       .then(res => {
-        console.log(res.data)
         this.setState({
-          thread: res.data
+          thread: res.data,
+          id: res.data.map(dt => dt._id)
         })
       })
       .catch(err => {
@@ -28,32 +30,46 @@ export default class General extends React.Component {
   }
 
   render() {
+    const { thread, count } = this.state
     return (
       <div className="container-fluid px-0">
-        <div className="col-md-12 col-lg-12">
+        <div
+          className="col-md-12 col-lg-12 col-sm-12 col-xs-12"
+          role="navigation"
+        >
           <Nav />
         </div>
 
         <div>
           <div className="col-md-6 offset-md-3 col-lg-6 offset-lg-3 ab">
-            {this.state.thread.map(data => (
+            {thread.map(data => (
               <div key={data._id} id="cont" className="my-2">
                 <div id="comments">
                   <div className="cmmnt px-4">
                     <div className="cmmnt-content">
                       <header>
-                        <a href="#" className="userlink">
+                        <a href={'/user/' + data._id} className="userlink">
                           {data.title}
-                        </a>{' '}
+                        </a>
                         &nbsp; - &nbsp;
                         <span className="pubdate">
                           <Moment toNow>{data.date}</Moment>
                         </span>
                       </header>
-                      <p>{data.description}</p>
-                      <span className="count text-primary">
-                        <i className="far fa-comment"></i> 80
-                      </span>
+                      <div className="descripton">
+                        <a href={'/user/' + data._id}>
+                          <p>
+                            {data.description
+                              .split(' ')
+                              .splice(0, 50)
+                              .join(' ')}
+                          </p>
+                        </a>
+                      </div>
+                      <div className="count text-primary">
+                        <i className="far fa-comment"></i> &nbsp;
+                        {count}
+                      </div>
                     </div>
                   </div>
                 </div>

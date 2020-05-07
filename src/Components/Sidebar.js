@@ -5,7 +5,10 @@ export default function Sidebar({ children }) {
   return (
     <div>
       <div className="row" id="body-row">
-        <div id="sidebar-container" className="fixed-top sidebar-expanded">
+        <div
+          id="sidebar-container"
+          className=" col-sm-8 fixed-top sidebar-expanded"
+        >
           <div>
             <div className="logo-s justify-content-center pt-2">
               <i className="far fa-user pt-2"></i>
@@ -15,10 +18,7 @@ export default function Sidebar({ children }) {
           </div>
 
           <ul className="list-group pl-4">
-            <a
-              href="/bar"
-              className="b-st list-group-item list-group-item-action"
-            >
+            <a href="#" className="b-st list-group-item list-group-item-action">
               <div className="d-flex w-100 justify-content-center align-items-center">
                 <span className="fa fa-tasks fa-fw mr-3"></span>
                 <span className="menu-collapsed">Dashboard</span>
@@ -46,10 +46,7 @@ export default function Sidebar({ children }) {
                 <span className="submenu-icon ml-auto"></span>
               </div>
             </a>
-            <a
-              href="/user"
-              className="b-st list-group-item list-group-item-action"
-            >
+            <a href="#" className="b-st list-group-item list-group-item-action">
               <div className="d-flex w-100 justify-content-center align-items-center">
                 <span className="fa fa-calendar fa-fw mr-3"></span>
                 <span className="menu-collapsed">User Comment</span>
@@ -58,7 +55,7 @@ export default function Sidebar({ children }) {
             </a>
             <a href="#" className="b-st list-group-item list-group-item-action">
               <div className="d-flex w-100 justify-content-center align-items-center">
-                <span className="fa fa-envelope-o fa-fw mr-3"></span>
+                <span className="fa fa-calendar fa-fw mr-3"></span>
                 <span className="menu-collapsed"> Admin profile</span>
                 <span className="submenu-icon ml-auto"></span>
               </div>

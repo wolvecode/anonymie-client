@@ -1,5 +1,7 @@
 import React from 'react'
-import { login } from '../utils/request'
+import axios from 'axios'
+import { navigate } from '@reach/router'
+// import { login } from '../utils/request'
 
 class Login extends React.Component {
   state = {
@@ -16,14 +18,21 @@ class Login extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    const { email, password, isLoading } = this.state
-    if (isLoading) return false
-    this.setState({
-      isLoading: true
-    })
-    login({ email, password })
-      .then(data => console.log(data))
-      .catch(error => error(error))
+
+    const sign = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    axios
+      .post('http://localhost:5000/login/', sign)
+      .then(res => {
+        console.log(res.data)
+        navigate('/sug')
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 
   render() {
@@ -98,9 +107,7 @@ class Login extends React.Component {
                 Enter your details to create <br /> an account
               </p>
               <form>
-                <a href="/reg">
-                  <button>SIGN UP</button>
-                </a>
+                <button formAction="/admin/reg">SIGN UP</button>
               </form>
             </div>
             <div className="grad3"></div>

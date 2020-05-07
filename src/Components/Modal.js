@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigate, redirectTo } from '@reach/router'
+import { navigate } from '@reach/router'
 import axios from 'axios'
 import '../style/style.css'
 
@@ -27,7 +27,7 @@ export default class Modal extends React.Component {
       description: this.state.description
     }
     axios.post('http://localhost:5000/suggestion/', suggestion).then(res => {
-      navigate('/')
+      navigate('/sug')
     })
   }
 
@@ -91,8 +91,11 @@ export default class Modal extends React.Component {
                       ></textarea>
                     </div>
 
-                    <button type="submit" className="btn d-flex float-right">
-                      Add Changes
+                    <button
+                      type="submit"
+                      className="btn d-flex float-right text-center"
+                    >
+                      Add Suggestion
                     </button>
                   </form>
                 </div>

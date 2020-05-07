@@ -3,15 +3,18 @@ import React from 'react'
 export default class Nav extends React.Component {
   render() {
     return (
-      <nav className=" na navbar navbar-expand-md navbar-light bg-light fixed-top">
-        <a className="navbar-brand ml-5" href="#">
+      <nav
+        className=" na navbar navbar-expand-md navbar-light bg-light fixed-top"
+        role="navigation"
+      >
+        <a className="navbar-brand ml-5" href="/">
           <div className="logo ml-5">
             <i className="far fa-user pt-2"></i>
             <p className="pt-2">nonymi</p>
           </div>
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler pt-0"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -28,26 +31,11 @@ export default class Nav extends React.Component {
               <a className="nav-link nav-li" href="#">
                 Home <span className="sr-only"></span>
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Spaces
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Link
-              </a>
             </li> */}
           </ul>
           <form className="form-inline my-2 mr-5">
             <input
-              className="form-control mr-5"
+              className="form-control-md form-control-lg mr-5"
               type="search"
               placeholder="Search"
               aria-label="Search"

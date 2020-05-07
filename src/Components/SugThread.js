@@ -5,10 +5,16 @@ import axios from 'axios'
 
 const Suggestion = props => (
   <tr className="table-row border">
-    <td className="p-3 m-2">{props.suggestion._id}</td>
-    <td className="el-style">{props.suggestion.title}</td>
-    <td className="el-style">{props.suggestion.date.substring(0, 10)}</td>
-    <td className="el-style">
+    <td with="100" className="p-3 m-2">
+      {props.suggestion._id}
+    </td>
+    <td with="220" className="el-style">
+      {props.suggestion.title}
+    </td>
+    <td with="100" className="el-style">
+      {props.suggestion.date.substring(0, 10)}
+    </td>
+    <td with="50" className="el-style">
       <a href={'/edit/' + props.suggestion._id}>Edit</a>|
       <a href={'/suggestion/comment/' + props.suggestion._id}>Comment</a>|
       <a

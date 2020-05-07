@@ -1,6 +1,7 @@
 import React from 'react'
 import '../style/style'
 import { signUp } from '../utils/request'
+import { navigate } from '@reach/router'
 
 class Register extends React.Component {
   state = {
@@ -18,7 +19,10 @@ class Register extends React.Component {
       isLoading: true
     })
     signUp({ fullName, email, password })
-      .then(data => console.log(data))
+      .then(data => {
+        console.log(data)
+        navigate('/')
+      })
       .catch(error => console.error(error))
   }
 
@@ -46,7 +50,7 @@ class Register extends React.Component {
                 Sign in into dashboard with <br /> your personal details
               </p>
               <form>
-                <button>SIGN IN</button>
+                <button formAction="/admin/login">SIGN IN</button>
               </form>
               <div className="grad7"></div>
             </div>
