@@ -1,0 +1,36 @@
+@import './variables';
+@import './functions';
+
+.user-comment textarea {
+  @include style();
+  font-weight: bold;
+  color: $primaryColor;
+  font-size: 1.0625rem;
+}
+
+.user-comment button {
+  @include style();
+  font-size: 1.0625rem;
+  padding-left: 2.5rem;
+  //   text-align: center;
+  font-weight: bold;
+  margin-top: 3.125rem;
+  color: $initialColor;
+  background: $primaryColor;
+  width: 10rem;
+  height: 3.125rem;
+  border: 0.125rem solid $initialColor;
+  box-sizing: border-box;
+  border-radius: 6.25rem;
+  &:hover {
+    color: $secondaryColor;
+    cursor: pointer;
+  }
+}
+
+form span {
+  @include style();
+  font-weight: bolder;
+  font-size: 1.125rem;
+  color: $primaryColor;
+}
