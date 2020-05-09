@@ -40,6 +40,7 @@ export default class EditSuggestion extends React.Component {
 
   onSubmit(e) {
     e.preventDefault()
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     const suggestion = {
       title: this.state.title,
@@ -47,7 +48,7 @@ export default class EditSuggestion extends React.Component {
     }
 
     axios
-      .put('http://localhost:5000/suggestion/' + this.props.id, suggestion)
+      .put(baseUrl + '/suggestion/' + this.props.id, suggestion)
       .then(res => {
         navigate('/sug')
       })
