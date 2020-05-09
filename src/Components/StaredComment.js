@@ -15,8 +15,10 @@ export default class ComThread extends React.Component {
   }
 
   componentDidMount() {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     axios
-      .get('http://localhost:5000/commentbysugid/' + this.props.id)
+      .get(baseUrl + '/commentbysugid/' + this.props.id)
       .then(res => {
         this.setState({
           comments: res.data

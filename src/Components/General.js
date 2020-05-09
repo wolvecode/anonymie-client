@@ -16,8 +16,10 @@ export default class General extends React.Component {
   }
 
   componentDidMount() {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     axios
-      .get('http://localhost:5000/suggestion/')
+      .get(baseUrl + '/suggestion/')
       .then(res => {
         this.setState({
           thread: res.data,

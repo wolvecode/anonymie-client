@@ -24,7 +24,6 @@ class App extends React.Component {
         <ComThread path="/suggestion/comment/:id" />
         <EditSuggestion path="/edit/:id" />
         <CommentStat path="/stat" />
-        {/* <Sidebar path="/bar" /> */}
         <Register path="/admin/reg" />
       </Router>
     )

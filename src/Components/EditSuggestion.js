@@ -17,8 +17,10 @@ export default class EditSuggestion extends React.Component {
   }
 
   componentDidMount() {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     axios
-      .get('http://localhost:5000/suggestion/' + this.props.id)
+      .get(baseUrl + '/suggestion/' + this.props.id)
       .then(res => {
         this.setState({
           title: res.data.title,

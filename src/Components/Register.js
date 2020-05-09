@@ -21,7 +21,7 @@ class Register extends React.Component {
     signUp({ fullName, email, password })
       .then(data => {
         console.log(data)
-        navigate('/')
+        navigate('/admin/login')
       })
       .catch(error => console.error(error))
   }

@@ -22,7 +22,8 @@ export default class UserComment extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/suggestion/' + this.props.id).then(res => {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+    axios.get(baseUrl + '/suggestion/' + this.props.id).then(res => {
       this.setState({
         title: res.data.title,
         SuggestionID: res.data._id,
@@ -30,13 +31,11 @@ export default class UserComment extends React.Component {
         date: res.data.date
       })
     })
-    axios
-      .get('http://localhost:5000/commentbysugid/' + this.props.id)
-      .then(res => {
-        this.setState({
-          count: res.data.length
-        })
+    axios.get(baseUrl + '/commentbysugid/' + this.props.id).then(res => {
+      this.setState({
+        count: res.data.length
       })
+    })
   }
 
   handleComment(e) {
@@ -46,14 +45,16 @@ export default class UserComment extends React.Component {
   }
 
   handleSubmit(e) {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     e.preventDefault()
     const comment = {
       SuggestionID: this.state.SuggestionID,
       comment: this.state.comment
     }
 
-    axios.post('http://localhost:5000/comment', comment).then(res => {
-      navigate('/general')
+    axios.post(baseUrl + '/comment', comment).then(res => {
+      navigate('/')
     })
   }
 

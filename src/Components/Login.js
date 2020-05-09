@@ -17,6 +17,8 @@ class Login extends React.Component {
   }
 
   handleSubmit = event => {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     event.preventDefault()
 
     const sign = {
@@ -25,7 +27,7 @@ class Login extends React.Component {
     }
 
     axios
-      .post('http://localhost:5000/login/', sign)
+      .post(baseUrl + '/login/', sign)
       .then(res => {
         console.log(res.data)
         navigate('/sug')

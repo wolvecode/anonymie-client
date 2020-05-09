@@ -21,13 +21,19 @@ export default class Modal extends React.Component {
   }
 
   handleSubmit(e) {
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
+
     e.preventDefault()
     const suggestion = {
       title: this.state.title,
       description: this.state.description
     }
-    axios.post('http://localhost:5000/suggestion/', suggestion).then(res => {
+    axios.post(baseUrl + '/suggestion/', suggestion).then(res => {
       navigate('/sug')
+      this.setState({
+        title: '',
+        description: ''
+      })
     })
   }
 
