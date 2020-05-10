@@ -9,6 +9,7 @@ import Register from './Components/Register'
 import ComThread from './Components/StaredComment'
 import General from './Components/General'
 import UserComment from './Components/UserComment'
+import NotFound from './Components/NotFound'
 
 class App extends React.Component {
   constructor(props) {
@@ -21,6 +22,7 @@ class App extends React.Component {
         <UserComment path="/user/:id" />
         <SuggestionLog path="sug" />
         <General path="/" />
+        <NotFound path="*" />
         <ComThread path="/suggestion/comment/:id" />
         <EditSuggestion path="/edit/:id" />
         <CommentStat path="/stat" />
