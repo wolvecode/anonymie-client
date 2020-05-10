@@ -12,7 +12,7 @@
   "license": "ISC",
   "staticFiles": {
     "staticPath": "_redirects",
-    "watcherGlob": "**"
+    "watcherGlob": "build"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
