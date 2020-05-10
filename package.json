@@ -10,10 +10,6 @@
   },
   "author": "",
   "license": "ISC",
-  "staticFiles": {
-    "staticPath": "_redirects",
-    "watcherGlob": "**"
-  },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
