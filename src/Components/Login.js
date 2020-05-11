@@ -1,7 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import { navigate } from '@reach/router'
-// import { login } from '../utils/request'
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+import { store } from 'react-notifications-component'
 
 class Login extends React.Component {
   state = {
@@ -17,8 +19,6 @@ class Login extends React.Component {
   }
 
   handleSubmit = event => {
-    const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     event.preventDefault()
 
     const sign = {
@@ -27,13 +27,33 @@ class Login extends React.Component {
     }
 
     axios
-      .post(baseUrl + '/login/', sign)
+      .post(process.env.baseUrl + '/login/', sign)
       .then(res => {
         console.log(res.data)
         navigate('/sug')
       })
       .catch(err => {
-        console.log(err)
+        store.addNotification({
+          title: 'INVALID',
+          message: 'Wrong Email Or Password',
+          type: 'danger',
+          container: 'top-left',
+          insert: 'top',
+          animationIn: ['animated', 'fadeIn'],
+          animationOut: ['animated', 'fadeOut'],
+
+          dismiss: {
+            duration: 2000,
+            pauseOnHover: true,
+            onScreen: true,
+            showIcon: true
+          },
+          width: 450
+        })
+        this.setState({
+          email: '',
+          password: ''
+        })
       })
   }
 
@@ -42,6 +62,7 @@ class Login extends React.Component {
 
     return (
       <div className="container-fluid">
+        <ReactNotification />
         <div className="row side">
           <div className="col-lg-7 col-md-7  side1 p-0">
             <div className="logo">
@@ -74,6 +95,7 @@ class Login extends React.Component {
                     value={email}
                     name="email"
                     placeholder="Emial"
+                    required
                   />
                 </div>
                 <div className="align">
@@ -86,6 +108,7 @@ class Login extends React.Component {
                     value={password}
                     name="password"
                     placeholder="Password"
+                    required
                   />
                 </div>
                 <div className="align a">
