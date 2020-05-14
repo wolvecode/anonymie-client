@@ -17,10 +17,10 @@ export default class EditSuggestion extends React.Component {
   }
 
   componentDidMount() {
-    const baseUrl = 'https://nonymi-server.herokuapp.com'
+    // const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     axios
-      .get(baseUrl + '/suggestion/' + this.props.id)
+      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
       .then(res => {
         this.setState({
           title: res.data.title,
@@ -40,7 +40,7 @@ export default class EditSuggestion extends React.Component {
 
   onSubmit(e) {
     e.preventDefault()
-    const baseUrl = 'https://nonymi-server.herokuapp.com'
+    // const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     const suggestion = {
       title: this.state.title,
@@ -48,7 +48,7 @@ export default class EditSuggestion extends React.Component {
     }
 
     axios
-      .put(baseUrl + '/suggestion/' + this.props.id, suggestion)
+      .put(process.env.baseUrl + '/suggestion/' + this.props.id, suggestion)
       .then(res => {
         navigate('/sug')
       })

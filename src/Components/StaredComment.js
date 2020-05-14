@@ -15,10 +15,10 @@ export default class ComThread extends React.Component {
   }
 
   componentDidMount() {
-    const baseUrl = 'https://nonymi-server.herokuapp.com'
+    // const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     axios
-      .get(baseUrl + '/commentbysugid/' + this.props.id)
+      .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
       .then(res => {
         this.setState({
           comments: res.data
@@ -29,9 +29,14 @@ export default class ComThread extends React.Component {
       })
   }
 
-  handleChecked(e) {
+  handleChecked = (id, stared) => {
     this.setState({
-      stared: e.target.checked
+      comments: this.state.comments.map(comt =>
+        comt._id === id ? { ...comt, stared } : comt
+      )
+    })
+    axios.put(process.env.baseUrl + '/comment/stared/' + id, {
+      stared: stared
     })
   }
   render() {
@@ -66,8 +71,10 @@ export default class ComThread extends React.Component {
                           <input
                             type="checkbox"
                             name="check"
-                            onChange={this.handleChecked}
-                            checked={this.state.stared}
+                            checked={comment.stared}
+                            onChange={({ target }) =>
+                              this.handleChecked(comment._id, target.checked)
+                            }
                           />
                           <span className="slider round"></span>
                         </label>

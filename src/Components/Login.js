@@ -9,30 +9,30 @@ class Login extends React.Component {
   state = {
     email: '',
     password: '',
-    isLoading: false
+    isLoading: false,
   }
 
   handleOnChange = (key, element) => {
     this.setState({
-      [key]: element.target.value
+      [key]: element.target.value,
     })
   }
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     event.preventDefault()
 
     const sign = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     }
 
     axios
       .post(process.env.baseUrl + '/login/', sign)
-      .then(res => {
+      .then((res) => {
         console.log(res.data)
         navigate('/sug')
       })
-      .catch(err => {
+      .catch((err) => {
         store.addNotification({
           title: 'INVALID',
           message: 'Wrong Email Or Password',
@@ -46,13 +46,13 @@ class Login extends React.Component {
             duration: 2000,
             pauseOnHover: true,
             onScreen: true,
-            showIcon: true
+            showIcon: true,
           },
-          width: 450
+          width: 450,
         })
         this.setState({
           email: '',
-          password: ''
+          password: '',
         })
       })
   }
@@ -91,7 +91,7 @@ class Login extends React.Component {
                   <input
                     type="text"
                     className="input"
-                    onChange={elm => this.handleOnChange('email', elm)}
+                    onChange={(elm) => this.handleOnChange('email', elm)}
                     value={email}
                     name="email"
                     placeholder="Emial"
@@ -104,7 +104,7 @@ class Login extends React.Component {
                     type="password"
                     className="input-field"
                     className="form"
-                    onChange={elm => this.handleOnChange('password', elm)}
+                    onChange={(elm) => this.handleOnChange('password', elm)}
                     value={password}
                     name="password"
                     placeholder="Password"
