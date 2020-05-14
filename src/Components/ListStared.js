@@ -8,16 +8,16 @@ export default class ComThread extends React.Component {
     super(props)
     this.state = {
       comments: [],
-      stared: false,
+      stared: [],
       isEmpty: true
     }
-    this.handleChecked = this.handleChecked.bind(this)
   }
 
   componentDidMount() {
     axios
       .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
       .then(res => {
+        console.log(res.data)
         this.setState({
           comments: res.data
         })
@@ -37,6 +37,7 @@ export default class ComThread extends React.Component {
       stared: stared
     })
   }
+
   render() {
     const { comments } = this.state
     return (
