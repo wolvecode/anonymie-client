@@ -15,8 +15,10 @@ const Suggestion = props => (
       {props.suggestion.date.substring(0, 10)}
     </td>
     <td with="50" className="el-style">
-      <a href={'/edit/' + props.suggestion._id}>Edit</a>|
-      <a href={'/suggestion/comment/' + props.suggestion._id}>Comment</a>|
+      <a href={'/edit/' + props.suggestion._id}>Edit</a> &nbsp; | &nbsp;
+      <a href={'/stared/' + props.suggestion._id}>Stared</a> &nbsp; | &nbsp;
+      <a href={'/suggestion/comment/' + props.suggestion._id}>Comment</a>{' '}
+      &nbsp;| &nbsp;
       <a
         href="#"
         onClick={() => {

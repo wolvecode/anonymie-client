@@ -9,6 +9,7 @@ export default class ComThread extends React.Component {
     this.state = {
       comments: [],
       stared: [],
+      staredT: [],
       isEmpty: true
     }
   }
@@ -17,9 +18,9 @@ export default class ComThread extends React.Component {
     axios
       .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
       .then(res => {
-        console.log(res.data)
         this.setState({
-          comments: res.data
+          comments: res.data,
+          stared: res.data.filter(stare => stare.stared === true)
         })
       })
       .catch(err => {
@@ -29,22 +30,28 @@ export default class ComThread extends React.Component {
 
   handleChecked = (id, stared) => {
     this.setState({
-      comments: this.state.comments.map(comt =>
+      stared: this.state.stared.map(comt =>
         comt._id === id ? { ...comt, stared } : comt
       )
     })
-    axios.put(process.env.baseUrl + '/comment/stared/' + id, {
-      stared: stared
-    })
+    axios
+      .put(process.env.baseUrl + '/comment/stared/' + id, {
+        stared: stared
+      })
+      .then(res => {
+        this.setState({
+          stared: this.state.stared.filter(el => el._id !== id)
+        })
+      })
   }
 
   render() {
-    const { comments } = this.state
+    const { comments, stared } = this.state
     return (
       <div>
         <Sidebar>
           <div className="col-md-10 offset-md-2  col-lg-10 offset-lg-2  col-sm-8 offset-2 pt-3">
-            <h3>Comment List</h3>
+            <h3>Stared List</h3>
             {!comments && isEmpty ? (
               <div>
                 <h1>Empty</h1>
@@ -60,19 +67,19 @@ export default class ComThread extends React.Component {
                   </tr>
                 </thead>
                 <tbody>
-                  {this.state.comments.map(comment => (
-                    <tr key={comment._id}>
-                      <td>{comment._id}</td>
-                      <td>{comment.comment}</td>
-                      <td>{comment.date.substring(0, 10)}</td>
+                  {this.state.stared.map(stared => (
+                    <tr key={stared._id}>
+                      <td>{stared._id}</td>
+                      <td>{stared.comment}</td>
+                      <td>{stared.date.substring(0, 10)}</td>
                       <td>
                         <label className="switch">
                           <input
                             type="checkbox"
                             name="check"
-                            checked={comment.stared}
+                            checked={stared.stared}
                             onChange={({ target }) =>
-                              this.handleChecked(comment._id, target.checked)
+                              this.handleChecked(stared._id, target.checked)
                             }
                           />
                           <span className="slider round"></span>
