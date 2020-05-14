@@ -9,21 +9,19 @@ export default class General extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: [],
       count: 3,
       thread: []
     }
   }
 
   componentDidMount() {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     axios
       .get(baseUrl + '/suggestion/')
       .then(res => {
         this.setState({
-          thread: res.data,
-          id: res.data.map(dt => dt._id)
+          thread: res.data
         })
       })
       .catch(err => {
