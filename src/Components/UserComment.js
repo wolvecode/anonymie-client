@@ -23,23 +23,19 @@ export default class UserComment extends React.Component {
 
   componentDidMount() {
     // const baseUrl = 'https://nonymi-server.herokuapp.com'
-    axios
-      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
-      .then(res => {
-        this.setState({
-          title: res.data.title,
-          SuggestionID: res.data._id,
-          description: res.data.description,
-          date: res.data.date
-        })
+    axios.get(baseUrl + '/suggestion/' + this.props.id).then(res => {
+      this.setState({
+        title: res.data.title,
+        SuggestionID: res.data._id,
+        description: res.data.description,
+        date: res.data.date
       })
-    axios
-      .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
-      .then(res => {
-        this.setState({
-          count: res.data.length
-        })
+    })
+    axios.get(baseUrl + '/commentbysugid/' + this.props.id).then(res => {
+      this.setState({
+        count: res.data.length
       })
+    })
   }
 
   handleComment(e) {
@@ -49,7 +45,7 @@ export default class UserComment extends React.Component {
   }
 
   handleSubmit(e) {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
 
     e.preventDefault()
     const comment = {
@@ -57,7 +53,7 @@ export default class UserComment extends React.Component {
       comment: this.state.comment
     }
 
-    axios.post(process.env.baseUrl + '/comment', comment).then(res => {
+    axios.post(baseUrl + '/comment', comment).then(res => {
       navigate('/')
     })
   }
