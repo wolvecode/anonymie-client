@@ -22,7 +22,7 @@ export default class UserComment extends React.Component {
   }
 
   componentDidMount() {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
+    const baseUrl = 'https://nonymi-server.herokuapp.com'
     axios.get(baseUrl + '/suggestion/' + this.props.id).then(res => {
       this.setState({
         title: res.data.title,
