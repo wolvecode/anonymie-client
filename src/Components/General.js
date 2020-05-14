@@ -16,7 +16,7 @@ export default class General extends React.Component {
 
   componentDidMount() {
     axios
-      .get(baseUrl + '/suggestion/')
+      .get(process.env.baseUrl + '/suggestion/')
       .then(res => {
         this.setState({
           thread: res.data

@@ -17,8 +17,6 @@ export default class EditSuggestion extends React.Component {
   }
 
   componentDidMount() {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     axios
       .get(process.env.baseUrl + '/suggestion/' + this.props.id)
       .then(res => {
@@ -40,8 +38,6 @@ export default class EditSuggestion extends React.Component {
 
   onSubmit(e) {
     e.preventDefault()
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     const suggestion = {
       title: this.state.title,
       description: this.state.description

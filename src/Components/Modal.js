@@ -21,8 +21,6 @@ export default class Modal extends React.Component {
   }
 
   handleSubmit(e) {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     e.preventDefault()
     const suggestion = {
       title: this.state.title,

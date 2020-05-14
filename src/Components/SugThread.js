@@ -38,8 +38,6 @@ export default class SuggestionLog extends React.Component {
     this.deleteSuggestion = this.deleteSuggestion.bind(this)
   }
   componentDidMount() {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     axios
       .get(process.env.baseUrl + '/suggestion/')
       .then(res => {
@@ -53,8 +51,6 @@ export default class SuggestionLog extends React.Component {
   }
 
   deleteSuggestion(id) {
-    // const baseUrl = 'https://nonymi-server.herokuapp.com'
-
     axios.delete(process.env.baseUrl + '/suggestion/' + id).then(res => {
       console.log(res.data)
       this.setState({
