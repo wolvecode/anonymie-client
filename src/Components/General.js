@@ -9,7 +9,6 @@ export default class General extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      count: 3,
       thread: []
     }
   }
@@ -28,7 +27,7 @@ export default class General extends React.Component {
   }
 
   render() {
-    const { thread, count } = this.state
+    const { thread } = this.state
     return (
       <div className="container-fluid px-0">
         <div
@@ -64,10 +63,10 @@ export default class General extends React.Component {
                           </p>
                         </a>
                       </div>
-                      <div className="count text-primary">
+                      {/* Number Of Comment In A Certain Suggestion */}
+                      {/* <div className="count text-primary">
                         <i className="far fa-comment"></i> &nbsp;
-                        {count}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
