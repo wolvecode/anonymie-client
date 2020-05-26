@@ -26,12 +26,12 @@ export default class Modal extends React.Component {
       title: this.state.title,
       description: this.state.description
     }
-    axios.post(process.env.baseUrl + '/suggestion/', suggestion).then(res => {
-      navigate('/sug')
+    axios.post(process.env.baseUrl + '/suggestion/', suggestion).then(() => {
       this.setState({
         title: '',
         description: ''
       })
+      this.props.history.push('/sug')
     })
   }
 
@@ -51,7 +51,6 @@ export default class Modal extends React.Component {
         <div
           className="modal fade"
           id="exampleModal"
-          // tabindex="-1"
           role="dialog"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
