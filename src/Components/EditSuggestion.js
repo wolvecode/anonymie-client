@@ -1,7 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 import Sidebar from './Sidebar'
-import { navigate } from '@reach/router'
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+import { store } from 'react-notifications-component'
 
 export default class EditSuggestion extends React.Component {
   constructor(props) {
@@ -17,8 +19,11 @@ export default class EditSuggestion extends React.Component {
   }
 
   componentDidMount() {
+    const {
+      match: { params }
+    } = this.props
     axios
-      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
+      .get(process.env.baseUrl + '/suggestion/' + params.id)
       .then(res => {
         this.setState({
           title: res.data.title,
@@ -30,13 +35,17 @@ export default class EditSuggestion extends React.Component {
         console.log(err)
       })
   }
-  handleChange(key, e) {
+  handleChange = (key, e) => {
     this.setState({
       [key]: e.target.value
     })
   }
 
-  onSubmit(e) {
+  onSubmit = e => {
+    const {
+      match: { params }
+    } = this.props
+
     e.preventDefault()
     const suggestion = {
       title: this.state.title,
@@ -44,15 +53,16 @@ export default class EditSuggestion extends React.Component {
     }
 
     axios
-      .put(process.env.baseUrl + '/suggestion/' + this.props.id, suggestion)
-      .then(res => {
-        navigate('/sug')
+      .put(process.env.baseUrl + '/suggestion/' + params.id, suggestion)
+      .then(() => {
+        this.props.history.push('/sug')
       })
   }
   render() {
     return (
       <div>
         <Sidebar>
+          <ReactNotification />
           <div className="col-md-8 offset-md-2 border mt-5">
             <h3>Edit Suggestion</h3>
             <form onSubmit={this.onSubmit}>
