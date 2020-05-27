@@ -23,7 +23,7 @@ export default class EditSuggestion extends React.Component {
       match: { params }
     } = this.props
     axios
-      .get(process.env.baseUrl + '/suggestion/' + params.id)
+      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
       .then(res => {
         this.setState({
           title: res.data.title,
@@ -53,7 +53,7 @@ export default class EditSuggestion extends React.Component {
     }
 
     axios
-      .put(process.env.baseUrl + '/suggestion/' + params.id, suggestion)
+      .put(process.env.baseUrl + '/suggestion/' + this.props.id, suggestion)
       .then(() => {
         this.props.history.push('/sug')
       })
