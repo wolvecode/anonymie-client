@@ -15,8 +15,11 @@ export default class ComThread extends React.Component {
   }
 
   componentDidMount() {
+    const {
+      match: { params }
+    } = this.props
     axios
-      .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
+      .get(process.env.baseUrl + '/commentbysugid/' + params.id)
       .then(res => {
         this.setState({
           comments: res.data
