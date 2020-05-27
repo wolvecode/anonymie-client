@@ -4,12 +4,12 @@ import Nav from './Nav'
 import Moment from 'react-moment'
 import '../style/style.css'
 import 'moment-timezone'
-import { navigate } from '@reach/router'
 
 export default class UserComment extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
+      success: false,
       count: '',
       comment: '',
       SuggestionID: '',
@@ -17,23 +17,22 @@ export default class UserComment extends React.Component {
       title: '',
       date: new Date()
     }
-    this.handleComment = this.handleComment.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   componentDidMount() {
-    axios
-      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
-      .then(res => {
-        this.setState({
-          title: res.data.title,
-          SuggestionID: res.data._id,
-          description: res.data.description,
-          date: res.data.date
-        })
+    const {
+      match: { params }
+    } = this.props
+    axios.get(process.env.baseUrl + '/suggestion/' + params.id).then(res => {
+      this.setState({
+        title: res.data.title,
+        SuggestionID: res.data._id,
+        description: res.data.description,
+        date: res.data.date
       })
+    })
     axios
-      .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
+      .get(process.env.baseUrl + '/commentbysugid/' + params.id)
       .then(res => {
         this.setState({
           count: res.data.length
@@ -41,21 +40,25 @@ export default class UserComment extends React.Component {
       })
   }
 
-  handleComment(e) {
+  handleComment = e => {
     this.setState({
       comment: e.target.value
     })
   }
 
-  handleSubmit(e) {
+  handleSubmit = e => {
     e.preventDefault()
     const comment = {
       SuggestionID: this.state.SuggestionID,
       comment: this.state.comment
     }
 
-    axios.post(process.env.baseUrl + '/comment', comment).then(res => {
-      navigate('/')
+    axios.post(process.env.baseUrl + '/comment', comment).then(() => {
+      this.setState({
+        SuggestionID: '',
+        comment: ''
+      })
+      this.props.history.push('/')
     })
   }
 
