@@ -23,7 +23,7 @@ export default class EditSuggestion extends React.Component {
       match: { params }
     } = this.props
     axios
-      .get(process.env.baseUrl + '/suggestion/' + this.props.id)
+      .get(process.env.baseUrl + '/suggestion/' + params.id)
       .then(res => {
         this.setState({
           title: res.data.title,
@@ -53,9 +53,25 @@ export default class EditSuggestion extends React.Component {
     }
 
     axios
-      .put(process.env.baseUrl + '/suggestion/' + this.props.id, suggestion)
+      .put(process.env.baseUrl + '/suggestion/' + params.id, suggestion)
       .then(() => {
-        this.props.history.push('/sug')
+        store.addNotification({
+          title: 'SUCCESS',
+          message: 'Edit Changed, You Can Make Changes Further',
+          type: 'success',
+          container: 'top-center',
+          insert: 'top',
+          animationIn: ['animated', 'fadeIn'],
+          animationOut: ['animated', 'fadeOut'],
+
+          dismiss: {
+            duration: 2000,
+            pauseOnHover: true,
+            onScreen: true,
+            showIcon: true
+          },
+          width: 650
+        })
       })
   }
   render() {
