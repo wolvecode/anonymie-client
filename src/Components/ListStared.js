@@ -9,14 +9,16 @@ export default class ComThread extends React.Component {
     this.state = {
       comments: [],
       stared: [],
-      staredT: [],
       isEmpty: true
     }
   }
 
   componentDidMount() {
+    const {
+      match: { params }
+    } = this.props
     axios
-      .get(process.env.baseUrl + '/commentbysugid/' + this.props.id)
+      .get(process.env.baseUrl + '/commentbysugid/' + params.id)
       .then(res => {
         this.setState({
           comments: res.data,
@@ -38,7 +40,7 @@ export default class ComThread extends React.Component {
       .put(process.env.baseUrl + '/comment/stared/' + id, {
         stared: stared
       })
-      .then(res => {
+      .then(() => {
         this.setState({
           stared: this.state.stared.filter(el => el._id !== id)
         })
@@ -46,7 +48,7 @@ export default class ComThread extends React.Component {
   }
 
   render() {
-    const { comments, stared } = this.state
+    const { comments } = this.state
     return (
       <div>
         <Sidebar>
