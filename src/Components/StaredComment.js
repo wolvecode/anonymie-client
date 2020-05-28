@@ -46,7 +46,9 @@ export default class ComThread extends React.Component {
       <div>
         <Sidebar>
           <div className="col-md-10 offset-md-2  col-lg-10 offset-lg-2  col-sm-8 offset-2 pt-3">
-            <h3>Comment List</h3>
+            <div>
+              <h3>Comment List</h3>
+            </div>
             {!comments && isEmpty ? (
               <div>
                 <h1>Empty</h1>

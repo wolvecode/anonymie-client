@@ -4,6 +4,9 @@ import Nav from './Nav'
 import Moment from 'react-moment'
 import '../style/style.css'
 import 'moment-timezone'
+import ReactNotification from 'react-notifications-component'
+import 'react-notifications-component/dist/theme.css'
+import { store } from 'react-notifications-component'
 
 export default class UserComment extends React.Component {
   constructor(props) {
@@ -58,7 +61,24 @@ export default class UserComment extends React.Component {
         SuggestionID: '',
         comment: ''
       })
-      this.props.history.push('/')
+      store.addNotification({
+        title: 'SUCCESS',
+        message: 'Comment added',
+            
+        type: 'success',
+        container: 'top-center',
+        insert: 'top',
+        animationIn: ['animated', 'fadeIn'],
+        animationOut: ['animated', 'fadeOut'],
+
+        dismiss: {
+          duration: 2000,
+          pauseOnHover: true,
+          onScreen: true,
+          showIcon: true
+        },
+        width: 500
+      })
     })
   }
 
@@ -67,6 +87,7 @@ export default class UserComment extends React.Component {
     return (
       <div>
         <Nav />
+        <ReactNotification />
         <div className="col-md-6 offset-md-3 col-lg-6 offset-lg-3 ab">
           <div id="cont" className="my-2">
             <div id="comments">
