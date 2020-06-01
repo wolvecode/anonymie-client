@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react'
+import React, { useState } from 'react'
 import Login from './Components/Login'
 import EditSuggestion from './Components/EditSuggestion'
 import SuggestionLog from './Components/SugThread'
@@ -30,7 +30,6 @@ function App() {
             <Route path="/stared/:id" component={ListStared} />
             <Route path="/suggestion/comment/:id" component={ComThread} />
             <Route path="/edit/:id" component={EditSuggestion} />
-
             <Route path="/admin/reg" component={Register} />
             <Route path="*" component={NotFound} />
           </Switch>
