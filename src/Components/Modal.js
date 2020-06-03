@@ -1,5 +1,4 @@
 import React from 'react'
-import { navigate } from '@reach/router'
 import axios from 'axios'
 import '../style/style.css'
 

@@ -3,10 +3,7 @@ import axios from 'axios'
 import ReactNotification from 'react-notifications-component'
 import 'react-notifications-component/dist/theme.css'
 import { store } from 'react-notifications-component'
-import { PromiseProvider } from 'mongoose'
 import AuthApi from '../utils/AuthApi'
-import { login } from '../utils/request'
-import { redirectTo } from '@reach/router'
 
 export default function Login(props) {
   const [email, setEmail] = useState('')

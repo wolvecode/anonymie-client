@@ -11,12 +11,13 @@ export default class General extends React.Component {
     this.state = {
       thread: []
     }
+    this.filter = this.filter.bind(this)
   }
-
   componentDidMount() {
     axios
       .get(process.env.baseUrl + '/suggestion/')
       .then(res => {
+        console.log(res.data)
         this.setState({
           thread: res.data
         })
@@ -25,21 +26,28 @@ export default class General extends React.Component {
         console.log(err)
       })
   }
-
+  filter(e) {
+    this.setState({ filter: e.target.value })
+  }
   render() {
-    const { thread } = this.state
+    let thread = this.state.thread
+    if (this.state.filter) {
+      thread = thread.filter(search => {
+        search.title.toLowerCase().includes(this.state.filter.toLowerCase())
+      })
+    }
     return (
       <div className="container-fluid px-0">
         <div
           className="col-md-12 col-lg-12 col-sm-12 col-xs-12"
           role="navigation"
         >
-          <Nav />
+          <Nav update={this.filter} />
         </div>
 
         <div>
           <div className="col-md-6 offset-md-3 col-lg-6 offset-lg-3 ab">
-            {thread.map(data => (
+            {this.state.thread.map(data => (
               <div key={data._id} id="cont" className="my-2">
                 <div id="comments">
                   <div className="cmmnt px-4">
