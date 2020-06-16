@@ -64,7 +64,6 @@ export default class UserComment extends React.Component {
       store.addNotification({
         title: 'SUCCESS',
         message: 'Comment added',
-            
         type: 'success',
         container: 'top-center',
         insert: 'top',
