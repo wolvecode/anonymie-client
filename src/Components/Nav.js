@@ -4,6 +4,7 @@ export default class Nav extends React.Component {
   constructor(props) {
     super(props)
   }
+
   render() {
     return (
       <nav
@@ -38,11 +39,10 @@ export default class Nav extends React.Component {
           </ul>
           <form className="form-inline my-2 mr-5">
             <input
-              onChange={this.props.update}
+              onChange={this.props.refreshFunction}
               className="form-control-md form-control-lg mr-5"
               type="search"
-              placeholder="Search"
-              aria-label="Search"
+              placeholder="Search by typing ..."
             />
           </form>
         </div>
