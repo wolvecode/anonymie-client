@@ -9,40 +9,50 @@ export default class General extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      thread: []
+      thread: [],
+      searchTerms: ''
     }
-    this.filter = this.filter.bind(this)
+    this.updateSearch = this.updateSearch.bind(this)
   }
   componentDidMount() {
     axios
-      .get(process.env.baseUrl + '/suggestion/')
+      .post(process.env.baseUrl + '/suggestion/')
       .then(res => {
-        console.log(res.data)
         this.setState({
-          thread: res.data
+          thread: res.data.suggestion
         })
       })
       .catch(err => {
         console.log(err)
       })
   }
-  filter(e) {
-    this.setState({ filter: e.target.value })
-  }
-  render() {
-    let thread = this.state.thread
-    if (this.state.filter) {
-      thread = thread.filter(search => {
-        search.title.toLowerCase().includes(this.state.filter.toLowerCase())
-      })
+
+  updateSearch(e) {
+    let data = {
+      searchTerm: this.state.searchTerms
     }
+    this.setState({ searchTerms: e.target.value })
+
+    axios
+      .post(process.env.baseUrl + '/suggestion/', data)
+      .then(res => {
+        this.setState({
+          thread: res.data.suggestion
+        })
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+
+  render() {
     return (
       <div className="container-fluid px-0">
         <div
           className="col-md-12 col-lg-12 col-sm-12 col-xs-12"
           role="navigation"
         >
-          <Nav update={this.filter} />
+          <Nav refreshFunction={this.updateSearch} />
         </div>
 
         <div>
