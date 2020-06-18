@@ -41,10 +41,10 @@ export default class SuggestionLog extends React.Component {
   }
   componentDidMount() {
     axios
-      .get(process.env.baseUrl + '/suggestion/')
+      .post(process.env.baseUrl + '/suggestion/')
       .then(res => {
         this.setState({
-          suggestions: res.data
+          suggestions: res.data.suggestion
         })
       })
       .catch(err => {

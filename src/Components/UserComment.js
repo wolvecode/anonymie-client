@@ -27,6 +27,7 @@ export default class UserComment extends React.Component {
       match: { params }
     } = this.props
     axios.get(process.env.baseUrl + '/suggestion/' + params.id).then(res => {
+      console.log(res.data)
       this.setState({
         title: res.data.title,
         SuggestionID: res.data._id,
@@ -56,29 +57,51 @@ export default class UserComment extends React.Component {
       comment: this.state.comment
     }
 
-    axios.post(process.env.baseUrl + '/comment', comment).then(() => {
-      this.setState({
-        SuggestionID: '',
-        comment: ''
-      })
-      store.addNotification({
-        title: 'SUCCESS',
-        message: 'Comment added',
-        type: 'success',
-        container: 'top-center',
-        insert: 'top',
-        animationIn: ['animated', 'fadeIn'],
-        animationOut: ['animated', 'fadeOut'],
+    axios
+      .post(process.env.baseUrl + '/comment', comment)
+      .then(() => {
+        store.addNotification(
+          {
+            title: 'SUCCESS',
+            message: 'Comment added',
+            type: 'success',
+            container: 'top-center',
+            insert: 'top',
+            animationIn: ['animated', 'fadeIn'],
+            animationOut: ['animated', 'fadeOut'],
 
-        dismiss: {
-          duration: 2000,
-          pauseOnHover: true,
-          onScreen: true,
-          showIcon: true
-        },
-        width: 500
+            dismiss: {
+              duration: 2000,
+              pauseOnHover: true,
+              onScreen: true,
+              showIcon: true
+            },
+            width: 500
+          },
+          this.setState({
+            comment: ''
+          })
+        )
       })
-    })
+      .catch(() => {
+        store.addNotification({
+          title: 'Error',
+          message: 'Comment should be more than character',
+          type: 'danger',
+          container: 'top-center',
+          insert: 'top',
+          animationIn: ['animated', 'fadeIn'],
+          animationOut: ['animated', 'fadeOut'],
+
+          dismiss: {
+            duration: 2000,
+            pauseOnHover: true,
+            onScreen: true,
+            showIcon: true
+          },
+          width: 500
+        })
+      })
   }
 
   render() {

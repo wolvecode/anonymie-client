@@ -28,60 +28,9 @@ export default function Sidebar({ children }) {
                 <span className="submenu-icon ml-auto"></span>
               </div>
             </a>
-            <a href="#" className="b-st list-group-item list-group-item-action">
-              <div className="d-flex w-100 justify-content-center align-items-center">
-                {/* <span className="fa fa-tasks fa-fw mr-3"></span> */}
-                {/* <span className="menu-collapsed">Dashboard</span>
-                <span className="submenu-icon ml-auto"></span> */}
-              </div>
-            </a>
-            <a
-              href="/stat"
-              className="b-st list-group-item list-group-item-action"
-            >
-              <div className="d-flex w-100 justify-content-center align-items-center">
-                {/* <span className="fa fa-user fa-fw mr-3"></span>
-                <span className="menu-collapsed">Comment Stat</span>
-                <span className="submenu-icon ml-auto"></span>
-                <span className="submenu-icon ml-auto"></span> */}
-              </div>
-            </a>
-            <a href="#" className="b-st list-group-item list-group-item-action">
-              <div className="d-flex w-100 justify-content-center align-items-center">
-                {/* <span className="fa fa-calendar fa-fw mr-3"></span>
-                <span className="menu-collapsed">User Comment</span>
-                <span className="submenu-icon ml-auto"></span> */}
-              </div>
-            </a>
-            <a href="#" className="b-st list-group-item list-group-item-action">
-              <div className="d-flex w-100 justify-content-center align-items-center">
-                {/* <span className="fa fa-calendar fa-fw mr-3"></span>
-                <span className="menu-collapsed"> Admin profile</span>
-                <span className="submenu-icon ml-auto"></span> */}
-              </div>
-            </a>
+
             <div className="menu-down">
               <div className="move-down">
-                <a
-                  href="#"
-                  className="b-st list-group-item list-group-item-action"
-                >
-                  <div className="d-flex w-100 justify-content-center align-items-center">
-                    {/* <span className="fa fa-question fa-fw mr-3"></span>
-                    <span className="menu-collapsed">Comment</span>
-                    <span className="submenu-icon ml-auto"></span> */}
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="b-st list-group-item list-group-item-action"
-                >
-                  <div className="d-flex w-100 justify-content-center align-items-center">
-                    <span className="fa fa-question fa-fw mr-3"></span>
-                    <span className="menu-collapsed">Logout</span>
-                    <span className="submenu-icon ml-auto"></span>
-                  </div>
-                </a>
                 <a
                   href="#top"
                   data-toggle="sidebar-colapse"
