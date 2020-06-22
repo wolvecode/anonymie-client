@@ -85,7 +85,7 @@ export default function Login(props) {
             <p>or use your email account</p>
             <form onSubmit={handleSubmit}>
               <div className="align">
-                <i className="fas fa-envelope-square ty"></i>
+                {/* <i className="fas fa-envelope-square ty"></i> */}
                 <input
                   type="text"
                   className="input"
@@ -97,7 +97,7 @@ export default function Login(props) {
                 />
               </div>
               <div className="align">
-                <i className="fas fa-lock"></i>
+                {/* <i className="fas fa-lock"></i> */}
                 <input
                   type="password"
                   className="input-field"
@@ -127,10 +127,17 @@ export default function Login(props) {
             <div className="grad2"></div>
             <h3>Hello!</h3>
             <p>
-              Enter your details to create <br /> an account
+              Welcome to nonymi app <br />
+              An app that gives users chance to express how they feel.
+              <br />
+              Please login to manage this app
             </p>
             <form>
-              <button formAction="/admin/reg">SIGN UP</button>
+              {/* <button formAction="/admin/reg">SIGN UP</button> */}
+              <br />
+              <br />
+              <br />
+              <br />
             </form>
           </div>
           <div className="grad3"></div>
