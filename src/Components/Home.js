@@ -18,7 +18,7 @@ export default class General extends React.Component {
   }
   componentDidMount() {
     axios
-      .post(process.env.baseUrl + '/suggestion/')
+      .get(process.env.baseUrl + '/suggestion/')
       .then(res => {
         this.setState({
           thread: res.data.suggestion,
@@ -37,7 +37,7 @@ export default class General extends React.Component {
     this.setState({ searchTerms: e.target.value })
 
     axios
-      .post(process.env.baseUrl + '/suggestion/', data)
+      .get(process.env.baseUrl + '/suggestion/', data)
       .then(res => {
         this.setState({
           thread: res.data.suggestion
