@@ -37,7 +37,7 @@ export default class General extends React.Component {
     this.setState({ searchTerms: e.target.value })
 
     axios
-      .get(process.env.baseUrl + '/suggestion/', data)
+      .post(process.env.baseUrl + '/suggestion/', data)
       .then(res => {
         this.setState({
           thread: res.data.suggestion
