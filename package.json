@@ -35,7 +35,7 @@
     "chart.js": "^2.9.3",
     "config": "^3.3.1",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.17.1",
     "helmet": "^3.23.3",
     "joi": "^14.3.1",
